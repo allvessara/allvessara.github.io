@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sara Alves — Comercial, Closing &amp; Client Experience</title>
+<meta name="description" content="Sara Alves — profissional de comercial com atuação em vendas consultivas, closing, partnerships, onboarding e client experience. Baseada em Nazaré, Portugal, aberta a oportunidades remotas e internacionais.">
+<meta property="og:title" content="Sara Alves — Comercial, Closing & Client Experience">
+<meta property="og:description" content="Conectando pessoas, soluções e oportunidades — e transformando relacionamento em confiança, conversão e continuidade.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F3EE;
+    --sand:#DDD0C2;
+    --terra:#B86B5E;
+    --terra-deep:#9d5347;
+    --graphite:#292929;
+    --rose:#C99391;
+    --white:#fff;
+    --ink:#292929;
+    --body:#5a544f;
+    --rule:#e3dbd1;
+    --serif:'Cormorant Garamond',Georgia,serif;
+    --sans:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:16px;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  ::selection{background:var(--rose);color:#fff}
+  :focus-visible{outline:2px solid var(--terra);outline-offset:3px;border-radius:2px}
+
+  .wrap{max-width:1080px;margin:0 auto;padding:0 32px}
+
+  /* ---------- NAV ---------- */
+  .nav{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    background:rgba(247,243,238,.85);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid transparent;
+    transition:border-color .3s;
+  }
+  .nav.scrolled{border-bottom-color:var(--rule)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;max-width:1080px;margin:0 auto;padding:0 32px}
+  .logo{display:flex;align-items:center;gap:11px;text-decoration:none}
+  .logo-mark{
+    width:34px;height:34px;border-radius:50% 50% 50% 4px;
+    background:var(--terra);
+    display:grid;place-items:center;
+    color:#fff;font-family:var(--serif);font-size:18px;font-weight:600;line-height:1;
+    padding-bottom:2px;flex-shrink:0;
+  }
+  .logo-name{font-family:var(--serif);font-size:23px;font-weight:600;letter-spacing:.2px;white-space:nowrap}
+  .nav-links{display:flex;align-items:center;gap:30px}
+  .nav-links a{font-size:14px;color:var(--body);text-decoration:none;position:relative;padding:4px 0;transition:color .2s}
+  .nav-links a::after{content:'';position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--terra);transition:right .3s}
+  .nav-links a:hover{color:var(--terra)}
+  .nav-links a:hover::after{right:0}
+  .nav-cta{
+    background:var(--graphite);color:#fff !important;text-decoration:none;
+    font-size:13.5px;padding:10px 22px;border-radius:40px;transition:background .25s;
+  }
+  .nav-cta:hover{background:var(--terra)}
+  .nav-cta::after{display:none}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;padding:150px 0 0;overflow:hidden}
+  .blob{position:absolute;border-radius:50%;pointer-events:none;z-index:0}
+  .blob-a{width:520px;height:520px;background:var(--sand);opacity:.55;top:-170px;right:-170px}
+  .blob-b{width:260px;height:260px;background:var(--rose);opacity:.22;top:250px;right:150px}
+  .hero .wrap{position:relative;z-index:1}
+
+  .kicker{
+    font-size:12.5px;letter-spacing:.14em;color:var(--terra);
+    display:flex;flex-wrap:wrap;gap:0 10px;margin-bottom:26px;
+  }
+  .kicker span::after{content:'·';margin-left:10px;color:var(--sand)}
+  .kicker span:last-child::after{content:''}
+
+  h1{
+    font-family:var(--serif);
+    font-weight:300;
+    font-size:clamp(40px,6.4vw,76px);
+    line-height:1.08;
+    letter-spacing:-.015em;
+    max-width:16ch;
+  }
+  h1 .line1{font-weight:600}
+  .rotator{color:var(--terra);font-style:italic;font-weight:600;transition:opacity .4s ease}
+  .rotator.fade{opacity:0}
+  h1 .line2{display:block;font-size:.62em;font-weight:300;color:var(--ink);margin-top:.28em;max-width:18ch;line-height:1.24}
+
+  .hero-text{margin-top:34px;max-width:52ch;color:var(--body);font-size:16.5px;font-weight:300}
+  .hero-text p+p{margin-top:14px}
+
+  .btn-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;
+    padding:15px 30px;border-radius:40px;text-decoration:none;
+    font-size:14.5px;transition:transform .2s,background .25s,color .25s,border-color .25s;
+  }
+  .btn-primary{background:var(--terra);color:#fff}
+  .btn-primary:hover{background:var(--terra-deep)}
+  .btn-ghost{border:1px solid var(--sand);color:var(--ink);background:transparent}
+  .btn-ghost:hover{border-color:var(--graphite);background:var(--graphite);color:#fff}
+  .btn:hover{transform:translateY(-2px)}
+
+  .place{margin-top:30px;font-size:14px;color:var(--body);display:flex;align-items:center;gap:10px}
+  .place svg{flex-shrink:0}
+
+  .stats{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+    margin:76px 0 0;border-top:1px solid var(--rule);
+  }
+  .stat{padding:28px 26px 30px 0;border-right:1px solid var(--rule)}
+  .stat:last-child{border-right:0}
+  .stat b{display:block;font-family:var(--serif);font-size:34px;font-weight:600;line-height:1.1;color:var(--terra)}
+  .stat span{display:block;margin-top:7px;font-size:13.5px;color:var(--body);line-height:1.55;max-width:22ch}
+
+  /* ---------- MARQUEE ---------- */
+  .marquee{margin-top:96px;padding:22px 0;background:var(--graphite);overflow:hidden;white-space:nowrap}
+  .marquee-track{display:inline-flex;gap:0;animation:slide 44s linear infinite}
+  .marquee-track span{
+    font-family:var(--serif);font-size:25px;font-style:italic;font-weight:300;
+    color:rgba(255,255,255,.88);padding:0 20px;
+  }
+  .marquee-track i{color:var(--rose);font-style:normal;font-size:13px;align-self:center;opacity:.9}
+  @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:110px 0}
+  .sec-head{margin-bottom:56px}
+  .sec-tag{
+    font-size:12.5px;letter-spacing:.14em;color:var(--terra);margin-bottom:18px;
+    display:flex;align-items:center;gap:14px;
+  }
+  .sec-tag::after{content:'';flex:1;height:1px;background:var(--rule);max-width:280px}
+  h2{
+    font-family:var(--serif);font-weight:300;
+    font-size:clamp(30px,4.4vw,50px);line-height:1.14;letter-spacing:-.01em;max-width:19ch;
+  }
+  h2.strong{font-weight:600}
+  .sec-sub{margin-top:18px;max-width:56ch;color:var(--body);font-weight:300}
+
+  /* serviços */
+  .contrib{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:14px;overflow:hidden}
+  .c-card{background:var(--paper);padding:38px 36px 42px;transition:background .3s}
+  .c-card:hover{background:var(--white)}
+  .c-num{font-family:var(--serif);font-size:15px;color:var(--terra);letter-spacing:.06em;margin-bottom:12px}
+  .c-card h3{font-family:var(--serif);font-size:27px;font-weight:600;line-height:1.2;margin-bottom:14px}
+  .c-card p{font-size:14.8px;color:var(--body);font-weight:300;max-width:42ch}
+
+  /* experiência */
+  .exp{border-top:1px solid var(--rule)}
+  .exp-item{padding:52px 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:200px 1fr;gap:48px}
+  .exp-meta .role{font-size:13.5px;color:var(--terra);margin-bottom:8px}
+  .exp-meta .period{font-size:13.5px;color:var(--body)}
+  .exp-body h3{font-family:var(--serif);font-size:33px;font-weight:600;line-height:1.16;margin-bottom:18px}
+  .exp-body p{color:var(--body);font-weight:300;max-width:60ch;font-size:15.5px}
+  .exp-body p+p{margin-top:14px}
+  .exp-figs{display:flex;flex-wrap:wrap;gap:34px;margin-top:28px;padding-top:24px;border-top:1px solid var(--rule)}
+  .fig b{display:block;font-family:var(--serif);font-size:27px;font-weight:600;color:var(--terra);line-height:1.1}
+  .fig span{font-size:13px;color:var(--body)}
+  .link-more{
+    display:inline-flex;align-items:center;gap:8px;margin-top:30px;
+    font-size:14px;color:var(--ink);text-decoration:none;
+    border-bottom:1px solid var(--terra);padding-bottom:4px;transition:gap .25s,color .25s;
+  }
+  .link-more:hover{gap:14px;color:var(--terra)}
+
+  /* como eu trabalho */
+  .method{
+    background:var(--white);border:1px solid var(--rule);
+    border-radius:20px;padding:72px 60px;position:relative;overflow:hidden;
+  }
+  .method::before{
+    content:'';position:absolute;top:-120px;right:-120px;width:320px;height:320px;
+    border-radius:50%;background:var(--sand);opacity:.35;
+  }
+  .method>*{position:relative}
+  .method-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:38px 56px;margin-top:8px}
+  .m-item{border-top:1px solid var(--rule);padding-top:22px}
+  .m-item h3{font-family:var(--serif);font-size:25px;font-weight:600;margin-bottom:10px;color:var(--terra)}
+  .m-item p{font-size:14.8px;color:var(--body);font-weight:300;max-width:40ch}
+  .pull{
+    margin-top:60px;padding:32px 0 0 30px;border-top:1px solid var(--rule);
+    border-left:3px solid var(--terra);
+    font-family:var(--serif);font-weight:600;
+    font-size:clamp(23px,2.9vw,33px);line-height:1.38;color:var(--ink);max-width:30ch;
+  }
+
+  /* sobre */
+  .about{display:grid;grid-template-columns:.85fr 1.25fr;gap:70px;align-items:start}
+  .about-aside{position:relative}
+  .portrait{
+    width:100%;aspect-ratio:4/5;border-radius:190px 190px 16px 16px;
+    overflow:hidden;background:var(--sand);
+  }
+  .portrait img{width:100%;height:100%;object-fit:cover;object-position:center 18%}
+  .about-quote{
+    margin-top:26px;font-family:var(--serif);font-style:italic;font-size:22px;
+    line-height:1.4;color:var(--terra);font-weight:400;
+  }
+  .about-body p{color:var(--body);font-weight:300;max-width:62ch}
+  .about-body p+p{margin-top:17px}
+  .about-body .lead{font-family:var(--serif);font-size:26px;line-height:1.42;color:var(--ink);font-weight:400;max-width:26ch}
+
+  /* competências */
+  .skills{display:flex;flex-wrap:wrap;gap:12px;max-width:900px}
+  .skill{
+    border:1px solid var(--sand);border-radius:40px;padding:11px 22px;
+    font-size:14.5px;color:var(--ink);background:var(--white);
+    transition:background .25s,color .25s,border-color .25s;
+  }
+  .skill:hover{background:var(--terra);border-color:var(--terra);color:#fff}
+
+  /* depoimentos */
+  .quotes{display:flex;flex-direction:column;gap:30px;max-width:780px}
+  .quote{background:var(--white);border:1px solid var(--rule);border-radius:16px;overflow:hidden}
+  .quote-head{
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+    padding:18px 26px;border-bottom:1px solid var(--rule);background:#fbf9f6;
+  }
+  .quote-head strong{font-family:var(--serif);font-size:21px;font-weight:600}
+  .quote-head span{display:block;font-size:12.5px;color:var(--body);font-weight:300;margin-top:-2px}
+  .quote-source{font-size:12px;color:var(--terra);letter-spacing:.06em;white-space:nowrap}
+  .shot{padding:22px 26px 6px}
+  .shot img{border:1px solid var(--rule);border-radius:8px;width:100%}
+  .translation{padding:8px 26px 28px}
+  .translation summary{
+    cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:8px;
+    font-size:13.5px;color:var(--terra);padding:10px 0;
+  }
+  .translation summary::-webkit-details-marker{display:none}
+  .translation summary::after{content:'▾';transition:transform .25s;font-size:11px}
+  .translation[open] summary::after{transform:rotate(180deg)}
+  .translation .txt{
+    font-size:14.5px;color:var(--body);font-weight:300;line-height:1.75;
+    border-left:2px solid var(--sand);padding-left:18px;margin-top:6px;
+  }
+  .translation .txt p+p{margin-top:12px}
+
+  /* contato */
+  .contact{padding-bottom:0}
+  .contact-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+  .contact h2{max-width:14ch}
+  .contact p{color:var(--body);font-weight:300;margin-top:20px;max-width:46ch}
+  .contact-actions{display:flex;flex-direction:column;gap:14px;align-items:stretch}
+  .contact-actions .btn{justify-content:center}
+
+  footer.site{
+    margin-top:110px;border-top:1px solid var(--rule);padding:30px 0 38px;
+    display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;
+    font-size:13px;color:var(--body);
+  }
+  footer.site a{text-decoration:none}
+  footer.site a:hover{color:var(--terra)}
+
+  .reveal{opacity:0;transform:translateY(18px)}
+  .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.3,1)}
+
+  @media (max-width:900px){
+    .nav-links{gap:18px}
+    .nav-links a:not(.nav-cta){display:none}
+    .stats{grid-template-columns:1fr 1fr}
+    .stat{border-right:0;padding:24px 20px 24px 0}
+    .stat:nth-child(odd){border-right:1px solid var(--rule);padding-right:24px}
+    .contrib{grid-template-columns:1fr}
+    .exp-item{grid-template-columns:1fr;gap:20px}
+    .method{padding:48px 26px;border-radius:14px}
+    .method-grid{grid-template-columns:1fr;gap:28px}
+    .pull{padding-left:20px}
+    .about{grid-template-columns:1fr;gap:40px}
+    .portrait{max-width:340px}
+    .contact-inner{grid-template-columns:1fr;gap:34px;align-items:start}
+  }
+  @media (max-width:600px){
+    .wrap,.nav-inner{padding:0 20px}
+    section{padding:76px 0}
+    .hero{padding-top:118px}
+    .blob-a{width:300px;height:300px;top:-110px;right:-110px}
+    .blob-b{display:none}
+    .marquee-track span{font-size:20px}
+    .quote-head{flex-direction:column;align-items:flex-start;gap:6px}
+    .shot,.translation{padding-left:16px;padding-right:16px}
+    footer.site{flex-direction:column;align-items:flex-start;gap:8px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none !important;transition:none !important;scroll-behavior:auto !important}
+    .reveal{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="logo" href="#top">
+      <span class="logo-mark">S</span>
+      <span class="logo-name">Sara Alves</span>
+    </a>
+    <div class="nav-links">
+      <a href="#servicos">Serviços</a>
+      <a href="#experiencia">Experiência</a>
+      <a href="#sobre">Sobre</a>
+      <a class="nav-cta" href="#contato">Contato</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="top">
+  <div class="blob blob-a"></div>
+  <div class="blob blob-b"></div>
+  <div class="wrap">
+    <div class="kicker">
+      <span>Comercial</span><span>Closer</span><span>Onboarding</span><span>Client Experience</span><span>Partnerships</span>
+    </div>
+
+    <h1>
+      <span class="line1">Conectando <span class="rotator" id="word">pessoas</span></span>
+      <span class="line2">e transformando relacionamento em confiança, conversão e continuidade.</span>
+    </h1>
+
+    <div class="hero-text">
+      <p>Sou a Sara, profissional da área comercial com atuação em vendas consultivas, fechamento, partnerships, onboarding e experiência do cliente.</p>
+      <p>Ajudo empresas a criar jornadas comerciais mais claras, humanas e estratégicas — da primeira conversa à construção de relações de longo prazo.</p>
+    </div>
+
+    <div class="btn-row">
+      <a class="btn btn-primary" href="#experiencia">Conheça meu trabalho</a>
+      <a class="btn btn-ghost" href="#contato">Vamos conversar</a>
+    </div>
+
+    <p class="place">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#B86B5E" stroke-width="2" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+      Baseada em Nazaré, Portugal · aberta a oportunidades remotas e internacionais
+    </p>
+
+    <div class="stats">
+      <div class="stat"><b>5 anos</b><span>vivendo e trabalhando em Portugal</span></div>
+      <div class="stat"><b>1000+</b><span>clientes acompanhados em jornadas complexas</span></div>
+      <div class="stat"><b>360°</b><span>sales · partnerships · onboarding · client experience</span></div>
+      <div class="stat"><b>PT + EN</b><span>atuação em ambientes internacionais</span></div>
+    </div>
+  </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track" id="track"></div>
+  </div>
+</header>
+
+<!-- ================= SERVIÇOS ================= -->
+<section id="servicos">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-tag">Como eu posso contribuir</div>
+      <h2 class="strong">Do primeiro contato ao relacionamento de longo prazo.</h2>
+      <p class="sec-sub">Quatro frentes que se conectam dentro da mesma jornada — seja como parte de um time ou em projetos e parcerias pontuais.</p>
+    </div>
+
+    <div class="contrib reveal">
+      <div class="c-card">
+        <div class="c-num">01</div>
+        <h3>Vendas consultivas &amp; Closing</h3>
+        <p>Condução de conversas comerciais, descoberta de necessidades, apresentação de soluções, negociação e fechamento — com estratégia, escuta e foco em uma decisão que faça sentido para os dois lados.</p>
+      </div>
+      <div class="c-card">
+        <div class="c-num">02</div>
+        <h3>Partnerships &amp; Business Development</h3>
+        <p>Identificação e desenvolvimento de relações estratégicas capazes de gerar novas oportunidades, leads e canais de crescimento.</p>
+      </div>
+      <div class="c-card">
+        <div class="c-num">03</div>
+        <h3>Client Experience &amp; Relationship</h3>
+        <p>Acompanhamento da jornada do cliente com foco em comunicação, confiança, retenção e construção de relacionamentos duradouros.</p>
+      </div>
+      <div class="c-card">
+        <div class="c-num">04</div>
+        <h3>Onboarding &amp; Jornada Comercial</h3>
+        <p>Criação de experiências mais claras e fluidas na transição entre venda e entrega, reduzindo atritos e garantindo que o cliente saiba exatamente o que esperar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERIÊNCIA ================= -->
+<section id="experiencia">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-tag">Experiência</div>
+      <h2>Algumas experiências que me trouxeram até aqui.</h2>
+    </div>
+
+    <div class="exp reveal">
+      <article class="exp-item">
+        <div class="exp-meta">
+          <div class="role">Client Experience · Sales Support · Operations</div>
+          <div class="period">Global Relocation Manager</div>
+        </div>
+        <div class="exp-body">
+          <h3>Jornadas internacionais, do primeiro contato ao visto aprovado.</h3>
+          <p>Atuação com clientes internacionais ao longo de jornadas complexas de imigração para Portugal, combinando comunicação, relacionamento, gestão de expectativas e coordenação de processos entre times, prazos e documentação.</p>
+          <p>Também desenvolvi partnerships com empresas ligadas ao setor — parcerias que se tornaram um canal recorrente de indicações e receita, com taxas de comissão negociadas caso a caso.</p>
+          <p>Na Roots Global, reestruturei a jornada do cliente inteira: dividi o pós-venda em 4 milestones principais e 8 touchpoints, com templates, guias de call e um tracker que deu visibilidade real do status de cada cliente para o time.</p>
+          <div class="exp-figs">
+            <div class="fig"><b>800+</b><span>clientes acompanhados</span></div>
+            <div class="fig"><b>Internacional</b><span>EUA, Reino Unido, Canadá e Austrália</span></div>
+            <div class="fig"><b>Alto envolvimento</b><span>jornadas longas e de muita confiança</span></div>
+          </div>
+          <a class="link-more" href="case-roots-onboarding.html">Veja o estudo de caso completo ↗</a>
+        </div>
+      </article>
+
+      <article class="exp-item">
+        <div class="exp-meta">
+          <div class="role">Account Manager &amp; Operations</div>
+          <div class="period">Viv Europe</div>
+        </div>
+        <div class="exp-body">
+          <h3>Operação e experiência do cliente em processos de visto.</h3>
+          <p>Acompanhei clientes internacionais em jornadas de visto do início ao fim, com foco operacional na melhoria da experiência: organização de processos, clareza nas próximas etapas e comunicação constante ao longo do caminho.</p>
+          <p>Colaborei também com o time de Marketing na criação de conteúdo que respondia às dúvidas reais de quem estava decidindo mudar de país — gerando leads orgânicos e conversas comerciais mais qualificadas.</p>
+          <div class="exp-figs">
+            <div class="fig"><b>150+</b><span>clientes acompanhados</span></div>
+            <div class="fig"><b>Marketing + Vendas</b><span>conteúdo que virou lead orgânico</span></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMO EU TRABALHO ================= -->
+<section id="metodo">
+  <div class="wrap">
+    <div class="method reveal">
+      <div class="sec-head">
+        <div class="sec-tag">Como eu trabalho</div>
+        <h2>Meu jeito de fazer comercial.</h2>
+      </div>
+      <div class="method-grid">
+        <div class="m-item">
+          <h3>Escutar antes de oferecer</h3>
+          <p>Entender contexto, necessidade e motivação antes de apresentar uma solução.</p>
+        </div>
+        <div class="m-item">
+          <h3>Criar clareza</h3>
+          <p>Traduzir informações, possibilidades e próximos passos de uma forma simples e segura.</p>
+        </div>
+        <div class="m-item">
+          <h3>Construir confiança</h3>
+          <p>Porque decisões importantes raramente acontecem sem ela.</p>
+        </div>
+        <div class="m-item">
+          <h3>Conectar oportunidades</h3>
+          <p>Perceber onde pessoas, soluções e negócios podem gerar valor uns para os outros.</p>
+        </div>
+        <div class="m-item">
+          <h3>Pensar além do fechamento</h3>
+          <p>Uma boa relação comercial não termina no “sim”. É ali que começa a experiência.</p>
+        </div>
+      </div>
+      <p class="pull">Para mim, vender bem é a junção de estratégia, escuta, relacionamento, timing e uma solução que realmente faça sentido para quem está do outro lado.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SOBRE ================= -->
+<section id="sobre">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-tag">Sobre Sara</div>
+      <h2>Um pouco sobre quem está por trás do comercial.</h2>
+    </div>
+
+    <div class="about reveal">
+      <aside class="about-aside">
+        <div class="portrait"><img src="assets/sara.jpg" alt="Sara Alves"></div>
+        <p class="about-quote">“Curiosidade por pessoas é a parte mais estratégica do meu trabalho.”</p>
+      </aside>
+
+      <div class="about-body">
+        <p class="lead">Há quase cinco anos, arrumei as malas e vim morar em Portugal.</p>
+        <p>Desde então, muita coisa mudou — não só o lugar onde moro, mas também a forma como enxergo o mundo, as pessoas e as diferentes maneiras de viver. Sair do meu país ampliou minhas referências, me ensinou a me adaptar e despertou ainda mais a curiosidade que sempre tive por histórias, culturas e comportamentos.</p>
+        <p>Talvez por isso eu tenha encontrado no universo comercial um espaço que combina tanto comigo. Eu gosto de gente. Gosto de entender o que move uma pessoa, o que ela precisa, o que está tentando resolver e o que faz com que ela confie em uma decisão.</p>
+        <p>Fora do trabalho, continuo sendo movida pela mesma curiosidade. Adoro me exercitar, viajar, descobrir lugares novos, um bom brunch e tempo de qualidade com os meus. Tenho dois dogs que ocupam uma parte considerável do meu coração e da minha rotina. Hoje moro em Nazaré, casa das famosas ondas gigantes — e, sempre que posso, estou de olho em um pôr do sol na praia.</p>
+        <p>Também adoro música, natureza e festivais. Existe algo em estar no meio de uma rave, cercada por pessoas vivendo o mesmo momento, que eu acho muito bonito: aquela sensação de fazer parte de algo enorme e, ao mesmo tempo, perceber o tamanho de uma formiga que somos no meio de tudo.</p>
+        <p>No fim, acho que meu trabalho e minha vida acabam se encontrando no mesmo lugar: curiosidade por pessoas, experiências e pelas conexões que podem surgir quando estamos realmente presentes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMPETÊNCIAS ================= -->
+<section id="competencias" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-tag">Competências</div>
+      <h2>O que eu levo comigo para dentro de uma operação.</h2>
+    </div>
+    <div class="skills reveal">
+      <span class="skill">Vendas Consultivas</span>
+      <span class="skill">Partnerships</span>
+      <span class="skill">Desenvolvimento de Negócio</span>
+      <span class="skill">Experiência do Cliente</span>
+      <span class="skill">Onboarding</span>
+      <span class="skill">Gestão de Relacionamento</span>
+      <span class="skill">Negociação</span>
+      <span class="skill">CRM</span>
+      <span class="skill">Otimização de Processos</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DEPOIMENTOS ================= -->
+<section id="depoimentos" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-tag">Depoimentos</div>
+      <h2>O que diz quem já trabalhou comigo.</h2>
+    </div>
+
+    <div class="quotes reveal">
+
+      <article class="quote">
+        <div class="quote-head">
+          <div>
+            <strong>Victor Queiroz</strong>
+            <span>Advogado · Direito Internacional, Corporativo e Imigração · gestor direto na Viv Europe</span>
+          </div>
+          <div class="quote-source">Recomendação no LinkedIn</div>
+        </div>
+        <div class="shot"><img src="assets/depoimento-victor.jpg" alt="Recomendação de Victor Queiroz no LinkedIn" loading="lazy"></div>
+        <details class="translation" open>
+          <summary>Ler tradução em português</summary>
+          <div class="txt">
+            <p>Tenho muito orgulho de compartilhar algumas palavras sobre a Sara Alves e tudo o que ela conquistou durante seu tempo na Viv Europe.</p>
+            <p>A Sara trabalhou conosco como Case Manager, ajudando muitos clientes — especialmente americanos — a se mudarem com sucesso para Portugal. Conduziu cada caso com uma organização incrível, ótima comunicação e uma atenção impressionante aos detalhes. Cada desafio que aparecia, ela transformava em uma oportunidade de entregar uma experiência ainda melhor para os nossos clientes.</p>
+            <p>O que sempre se destacou foi a forma como a Sara colocava a empresa e os clientes em primeiro lugar. Ela se importava de verdade em conseguir os melhores resultados para todos os envolvidos e estava sempre um passo à frente, garantindo que tudo corresse bem.</p>
+            <p>Sara, você fez uma diferença real aqui, e qualquer pessoa que tiver a sorte de trabalhar com você no futuro vai perceber rapidamente o quanto você é incrível. Desejo todo o sucesso que você merece na sua próxima jornada!</p>
+          </div>
+        </details>
+      </article>
+
+      <article class="quote">
+        <div class="quote-head">
+          <div>
+            <strong>Jonathan</strong>
+            <span>Cliente · processo de visto para Portugal</span>
+          </div>
+          <div class="quote-source">E-mail de cliente</div>
+        </div>
+        <div class="shot"><img src="assets/depoimento-jonathan.jpg" alt="E-mail de agradecimento do cliente Jonathan" loading="lazy"></div>
+        <details class="translation" open>
+          <summary>Ler tradução em português</summary>
+          <div class="txt">
+            <p>Oi Sara,</p>
+            <p>Meu visto foi finalmente aprovado ontem. É engraçado — na noite anterior eu tinha escrito um rascunho de e-mail para você, porque imaginei que estivesse se perguntando o que havia acontecido comigo depois de todo esse tempo. Aí, no dia seguinte, saiu a aprovação.</p>
+            <p>Espero que esteja indo muito bem na sua nova função. Tenho certeza de que você está levando o mesmo nível de competência e profissionalismo para lá, seja qual for. E também tenho certeza de que vai ter sucesso aonde quer que vá :)</p>
+            <p>Obrigado por toda a ajuda para fazer isso acontecer. Pessoas do seu calibre são raras — mas desconfio que boa parte delas seja brasileira :)</p>
+          </div>
+        </details>
+      </article>
+
+      <article class="quote">
+        <div class="quote-head">
+          <div>
+            <strong>Ahmed Mashhour</strong>
+            <span>Cliente · visto D8 para Portugal</span>
+          </div>
+          <div class="quote-source">Avaliação ★★★★★</div>
+        </div>
+        <div class="shot"><img src="assets/depoimento-ahmed.jpg" alt="Avaliação de cinco estrelas de Ahmed Mashhour" loading="lazy"></div>
+        <details class="translation" open>
+          <summary>Ler tradução em português</summary>
+          <div class="txt">
+            <p><strong>Uma experiência excepcional com a Viv Europe — profissional, transparente e realmente presente!</strong></p>
+            <p>Depois de assinar o contrato, a Sara foi designada como minha account manager. Tê-la ao meu lado mudou o jogo. Ao longo de toda a jornada, ela foi:</p>
+            <p>✅ Altamente capacitada e com muito conhecimento sobre o processo.<br>
+            ✅ Rápida para responder aos meus e-mails e mensagens, não importava quantas perguntas eu fizesse — mesmo as repetitivas ou complexas.<br>
+            ✅ Honesta e transparente — quando não tinha 100% de certeza sobre algo, não chutava. Consultava os colegas para dar uma resposta precisa. Esse nível de transparência aumentou muito minha confiança no processo inteiro.</p>
+            <p>Meu processo não foi isento de obstáculos. Houve atrasos, pedidos extras de documentos e momentos de frustração — mas a Sara e a equipe da Viv Europe estiveram comigo em cada etapa. Me ajudaram com tudo, desde lidar com intenções de indeferimento até garantir que a documentação bancária e do imóvel cumprisse todos os requisitos.</p>
+            <p>O que mais valorizei na Viv Europe foi que eles não apenas processavam papelada — se importavam de verdade em tornar a experiência o menos estressante possível. Mudar de país não é pouca coisa, e ter um parceiro assim tirou um peso enorme dos meus ombros.</p>
+            <p>Olhando para trás, posso dizer com sinceridade que sou grato por tê-los escolhido. A combinação de profissionalismo, transparência, expertise jurídica e suporte pessoal é incomparável. Sem a ajuda deles — especialmente a dedicação da Sara — não sei como teria lidado com as complexidades do visto D8 para Portugal.</p>
+            <p>Se você é nômade digital, trabalha remotamente ou procura um apoio confiável para a residência portuguesa, recomendo a Viv Europe de coração. Eles entregam o que prometem, tratam você com respeito e trabalham de verdade no seu melhor interesse.</p>
+            <p>Obrigado, Viv Europe, e um agradecimento especial à Sara por ter sido uma guia e parceira fantástica nesse processo! 🙌</p>
+          </div>
+        </details>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTATO ================= -->
+<section class="contact" id="contato">
+  <div class="wrap">
+    <div class="contact-inner reveal">
+      <div>
+        <div class="sec-tag">Contato</div>
+        <h2>Vamos conversar?</h2>
+        <p>Estou aberta a oportunidades em Comercial, Vendas Consultivas, Closing, Partnerships, Desenvolvimento de Negócios e Client Experience, especialmente em ambientes remotos e internacionais.</p>
+      </div>
+      <div class="contact-actions">
+        <a class="btn btn-primary" href="mailto:alves.sara@live.com">Enviar e-mail ↗</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/allvessara" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+
+    <footer class="site">
+      <span>© <span id="year">2026</span> Sara Alves · Comercial &amp; Client Experience</span>
+      <a href="#top">Voltar ao topo ↑</a>
+    </footer>
+  </div>
+</section>
+
+<script>
+  // Palavra rotativa do hero (troca suave)
+  (function(){
+    var words = ['pessoas','soluções','oportunidades'];
+    var el = document.getElementById('word');
+    if(!el || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var i = 0;
+    setInterval(function(){
+      el.classList.add('fade');
+      setTimeout(function(){
+        i = (i + 1) % words.length;
+        el.textContent = words[i];
+        el.classList.remove('fade');
+      }, 400);
+    }, 2800);
+  })();
+
+  // Marquee de competências
+  (function(){
+    var tags = ['Vendas Consultivas','Partnerships','Desenvolvimento de Negócio','Experiência do Cliente','Onboarding','Gestão de Relacionamento','Negociação','CRM','Otimização de Processos'];
+    var track = document.getElementById('track');
+    if(!track) return;
+    var html = tags.map(function(t){ return '<span>'+t+'</span><i>◆</i>'; }).join('');
+    track.innerHTML = html + html;
+  })();
+
+  // Borda da nav ao rolar
+  (function(){
+    var nav = document.getElementById('nav');
+    var onScroll = function(){ nav.classList.toggle('scrolled', window.scrollY > 12); };
+    window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+  })();
+
+  // Revelação suave
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)){ els.forEach(function(e){e.classList.add('in');}); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, {threshold:.08, rootMargin:'0px 0px -40px'});
+    els.forEach(function(e){ io.observe(e); });
+  })();
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
