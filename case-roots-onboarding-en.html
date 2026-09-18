@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Estudo de caso — Reestruturação da jornada do cliente | Sara</title>
-<meta name="description" content="Como reestruturei a jornada do cliente de uma consultoria de imigração em 4 milestones e 8 touchpoints — reduzindo o volume de e-mails pela metade.">
+<title>Case Study — Rebuilding the Client Journey | Sara</title>
+<meta name="description" content="How I restructured an immigration consultancy's client journey into 4 milestones and 8 touchpoints — cutting daily e-mail volume roughly in half.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -107,141 +107,141 @@
 
 <div class="header">
   <div class="head-top">
-    <a class="back" href="index.html" style="margin-bottom:0">← Voltar ao portfólio</a>
+    <a class="back" href="index-en.html" style="margin-bottom:0">← Back to portfolio</a>
     <div class="lang-switch">
-      <a href="case-roots-onboarding.html" class="active">PT</a>
-      <a href="case-roots-onboarding-en.html">EN</a>
+      <a href="case-roots-onboarding.html">PT</a>
+      <a href="case-roots-onboarding-en.html" class="active">EN</a>
     </div>
   </div>
-  <h1>Construindo um sistema de <em>onboarding</em> que escala</h1>
-  <p class="header-sub">De processos inconsistentes a uma jornada do cliente estruturada e repetível — Roots Global</p>
+  <h1>Building an <em>onboarding</em> system that scales</h1>
+  <p class="header-sub">From inconsistent processes to a structured, repeatable client journey — Roots Global</p>
 </div>
 
 <div class="main">
 
   <div class="glance">
     <div class="glance-item">
-      <div class="glance-label">Empresa</div>
+      <div class="glance-label">Client</div>
       <div class="glance-value">Roots Global</div>
-      <div class="glance-note">Consultoria de imigração, Portugal</div>
+      <div class="glance-note">Immigration consulting, Portugal</div>
     </div>
     <div class="glance-item">
-      <div class="glance-label">Entrega</div>
-      <div class="glance-value">Jornada do cliente</div>
-      <div class="glance-note">Framework de CX ponta a ponta</div>
+      <div class="glance-label">Deliverable</div>
+      <div class="glance-value">Client Journey</div>
+      <div class="glance-note">End-to-end CX framework</div>
     </div>
     <div class="glance-item">
-      <div class="glance-label">Ferramentas</div>
-      <div class="glance-value">Notion &amp; templates de e-mail</div>
-      <div class="glance-note">Tracker relacional em implementação</div>
+      <div class="glance-label">Tools</div>
+      <div class="glance-value">Notion &amp; e-mail templates</div>
+      <div class="glance-note">Relational tracker in progress</div>
     </div>
   </div>
 
   <section>
-    <div class="section-label">Contexto</div>
-    <p class="body-text">A Roots Global é uma consultoria de imigração sediada em Portugal que atende clientes de língua inglesa dos Estados Unidos, Reino Unido, Canadá e Austrália. Conforme a empresa cresceu, a experiência do cliente começou a mostrar fissuras: a qualidade do onboarding variava conforme a pessoa que conduzia o caso, a comunicação era reativa em vez de proativa e não existia um sistema que garantisse o mesmo padrão de atendimento para todo mundo.</p>
-    <p class="body-text">Assumi o desenho e a implementação de um framework de experiência do cliente do zero — cobrindo toda a jornada pós-venda, do primeiro pagamento até a aprovação do visto.</p>
+    <div class="section-label">Overview</div>
+    <p class="body-text">Roots Global is a Portugal-based immigration consultancy serving English-speaking clients from the US, UK, Canada and Australia. As the company grew, the client experience began to show cracks: onboarding quality varied depending on who was handling the case, communication was reactive rather than proactive, and there was no system in place to guarantee the same standard of service for everyone.</p>
+    <p class="body-text">I took on the design and implementation of a client experience framework from scratch — covering the entire post-sale journey, from first payment to visa approval.</p>
   </section>
 
   <section>
-    <div class="section-label">O desafio</div>
-    <p class="body-text">O problema central era inconsistência. Existiam práticas internas, mas eram não documentadas, dependentes de pessoas e variavam bastante entre os tipos de visto (D7, D8, D2, D1, Artigo 15). Isso gerava uma série de efeitos em cascata:</p>
+    <div class="section-label">The Challenge</div>
+    <p class="body-text">The core problem was inconsistency. Internal practices existed, but they were undocumented, person-dependent, and varied significantly across visa types (D7, D8, D2, D1, Article 15). This created a series of downstream effects:</p>
     <ul class="plain">
-      <li>Clientes recebiam níveis de comunicação diferentes dependendo de quem cuidava do caso</li>
-      <li>O time não tinha uma referência comum do que era um “bom” onboarding</li>
-      <li>Não havia visibilidade sobre em que ponto da jornada cada cliente estava</li>
-      <li>A comunicação reativa gerava ansiedade desnecessária e aumentava o volume de contatos de suporte</li>
-      <li>O acompanhamento vivia numa planilha densa e difícil de navegar, o que dificultava enxergar etapa, pendências e próximos touchpoints de forma rápida</li>
+      <li>Clients received different levels of communication depending on who was handling their case</li>
+      <li>The team had no shared reference for what "good" onboarding looked like</li>
+      <li>There was no visibility into where each client stood in their journey</li>
+      <li>Reactive communication created unnecessary client anxiety and increased support volume</li>
+      <li>Case tracking lived in a dense, hard-to-navigate spreadsheet, making it difficult to see a client's stage, pending items and next touchpoints at a glance</li>
     </ul>
   </section>
 
   <section>
-    <div class="section-label">A solução</div>
-    <p class="body-text">Desenhei uma jornada com 4 milestones e 8 touchpoints, padronizando a experiência em todos os tipos de visto e ainda assim permitindo variações específicas onde elas eram necessárias. O framework foi documentado, transformado em templates e reconstruído em um tracker relacional no Notion para uso operacional — substituindo a planilha por um sistema que mostra, em tempo real, a etapa de cada cliente, o que está pendente e qual é o próximo contato.</p>
+    <div class="section-label">The Solution</div>
+    <p class="body-text">I designed a journey made up of 4 milestones and 8 touchpoints, standardizing the experience across all visa types while still allowing for specific variations where needed. The framework was documented, turned into templates, and rebuilt as a relational tracker in Notion for operational use — replacing the spreadsheet with a system that shows, in real time, each client's stage, what's pending, and what the next contact should be.</p>
 
     <div class="chips">
       <span class="chip">4 milestones</span>
-      <span class="chip">8 touchpoints estruturados</span>
-      <span class="chip">5 tipos de visto cobertos</span>
-      <span class="chip">Guias de call com 9 seções</span>
+      <span class="chip">8 structured touchpoints</span>
+      <span class="chip">5 visa types covered</span>
+      <span class="chip">9-section call guides</span>
     </div>
 
     <div class="milestone-grid">
       <div class="milestone-card">
         <div class="milestone-num">MILESTONE 01</div>
-        <div class="milestone-title">Pagamento &amp; call de introdução</div>
-        <div class="milestone-touch">Confirmação de pagamento, e-mail de boas-vindas, agendamento da call, resumo pós-call</div>
+        <div class="milestone-title">Payment &amp; Intro Call</div>
+        <div class="milestone-touch">Payment confirmation, welcome e-mail, call scheduling, post-call summary</div>
       </div>
       <div class="milestone-card">
         <div class="milestone-num">MILESTONE 02</div>
-        <div class="milestone-title">Coleta de documentos</div>
-        <div class="milestone-touch">Entrega do checklist, acesso ao portal de submissão, atualizações de progresso</div>
+        <div class="milestone-title">Document Collection</div>
+        <div class="milestone-touch">Checklist delivery, submission portal access, progress updates</div>
       </div>
       <div class="milestone-card">
         <div class="milestone-num">MILESTONE 03</div>
-        <div class="milestone-title">Submissão do processo</div>
-        <div class="milestone-touch">Confirmação de submissão, briefing de prazos, guia do que esperar</div>
+        <div class="milestone-title">Application Submission</div>
+        <div class="milestone-touch">Submission confirmation, timeline briefing, what-to-expect guide</div>
       </div>
       <div class="milestone-card">
         <div class="milestone-num">MILESTONE 04</div>
-        <div class="milestone-title">Aprovação &amp; handoff</div>
-        <div class="milestone-touch">Comunicação da aprovação, guia de próximos passos, check-in pós-serviço</div>
+        <div class="milestone-title">Approval &amp; Handoff</div>
+        <div class="milestone-touch">Approval notification, next-steps guide, post-service check-in</div>
       </div>
     </div>
   </section>
 
   <section>
-    <div class="section-label">Resultados</div>
-    <p class="body-text">Medido pelo volume diário de e-mails de clientes (toda a comunicação, não só o onboarding) ao longo de três meses de implementação:</p>
+    <div class="section-label">Results</div>
+    <p class="body-text">Measured by daily client e-mail volume (all client communication, not just onboarding) over a three-month rollout:</p>
 
     <div class="results-grid">
-      <div class="results-head"><span>Antes</span></div>
-      <div class="results-head"><span>Durante a implementação</span></div>
-      <div class="results-head"><span>Depois da consolidação</span></div>
-      <div class="results-value"><strong>~50–60 / dia</strong></div>
-      <div class="results-value"><strong>~40 / dia</strong></div>
-      <div class="results-value"><strong>~20–30 / dia</strong></div>
+      <div class="results-head"><span>Before</span></div>
+      <div class="results-head"><span>During Rollout</span></div>
+      <div class="results-head"><span>After Consolidation</span></div>
+      <div class="results-value"><strong>~50–60 / day</strong></div>
+      <div class="results-value"><strong>~40 / day</strong></div>
+      <div class="results-value"><strong>~20–30 / day</strong></div>
     </div>
-    <p class="results-caption">O volume diário de comunicação caiu praticamente pela metade, refletindo menos e-mails de “em que pé está?” e de dúvidas conforme a nova estrutura passou a funcionar.</p>
+    <p class="results-caption">Overall daily communication volume dropped roughly in half, reflecting fewer "what's the status?" and clarification e-mails as the new structure took hold.</p>
 
     <ul class="plain" style="margin-top:24px">
-      <li>Onboarding padronizado em todos os tipos de visto — a qualidade deixou de depender de quem atendia</li>
-      <li>Menos comunicação interna improvisada, com responsabilidades claras e timing documentado</li>
-      <li>Uma linguagem operacional comum para falar de etapas e progresso dos clientes</li>
-      <li>Uma base replicável, que continua funcionando conforme o time cresce</li>
-      <li>Menos ansiedade do cliente, graças a uma comunicação proativa em cada etapa</li>
+      <li>Standardized onboarding across all visa types — quality no longer depended on who handled the case</li>
+      <li>Less ad-hoc internal communication, with clear ownership and documented timing</li>
+      <li>A shared operational language for talking about client stages and progress</li>
+      <li>A replicable foundation that keeps working as the team grows</li>
+      <li>Reduced client anxiety, thanks to proactive communication at every stage</li>
     </ul>
   </section>
 
   <section>
-    <div class="section-label">O que eu aprendi</div>
+    <div class="section-label">What I Learned</div>
     <div class="success-box">
-      <strong>Proativo vence reativo</strong>
-      <p>Esse projeto reforçou uma coisa: o trabalho de CX com mais impacto acontece antes de o cliente mandar a primeira mensagem. Quando a comunicação é proativa e estruturada, o cliente se sente seguro — e o volume de suporte cai. O desafio em uma consultoria pequena é construir sistemas rigorosos o suficiente para escalar, mas simples o suficiente para que um time em crescimento realmente use. O framework da Roots foi desenhado nesse equilíbrio: claro o bastante para seguir sem treinamento, flexível o bastante para acomodar as particularidades de cada visto.</p>
+      <strong>Proactive beats reactive</strong>
+      <p>This project reinforced one thing: the highest-impact CX work happens before the client ever sends that first message. When communication is proactive and structured, clients feel secure — and support volume drops. The challenge at a small consultancy is building systems rigorous enough to scale, but simple enough for a growing team to actually use. The Roots framework was designed with that balance in mind: clear enough to follow without training, flexible enough to accommodate the particularities of each visa type.</p>
     </div>
   </section>
 
   <section>
-    <div class="section-label">Competências aplicadas</div>
+    <div class="section-label">Skills Applied</div>
     <div class="chips">
-      <span class="chip">Estratégia de CX</span>
-      <span class="chip">Mapeamento de jornada</span>
-      <span class="chip">Documentação de processos</span>
-      <span class="chip">Sistemas em Notion</span>
-      <span class="chip">Colaboração entre times</span>
-      <span class="chip">Frameworks de onboarding</span>
+      <span class="chip">CX Strategy</span>
+      <span class="chip">Journey Mapping</span>
+      <span class="chip">Process Documentation</span>
+      <span class="chip">Notion Systems</span>
+      <span class="chip">Cross-team Collaboration</span>
+      <span class="chip">Onboarding Frameworks</span>
     </div>
   </section>
 
   <div class="back-bottom">
-    <a class="cta-button" href="index.html">← Voltar ao portfólio</a>
+    <a class="cta-button" href="index-en.html">← Back to portfolio</a>
   </div>
 
 </div>
 
 <div class="footer">
-  <div>Estudo de caso · Jornada e onboarding do cliente</div>
-  <div class="byline">Sara — Comercial, Closing &amp; Client Experience</div>
+  <div>Case Study · Client Journey &amp; Onboarding</div>
+  <div class="byline">Sara — Sales, Closing &amp; Client Experience</div>
 </div>
 
 </body>
