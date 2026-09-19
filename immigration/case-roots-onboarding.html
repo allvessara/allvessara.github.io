@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estudo de caso — Reestruturação da jornada do cliente | Sara</title>
+<meta name="description" content="Como reestruturei a jornada do cliente de uma consultoria de imigração em 4 milestones e 8 touchpoints — reduzindo o volume de e-mails pela metade.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#242829;
+    --paper:#F8F6F1;
+    --accent:#0F52BA;
+    --accent-deep:#0B3D8C;
+    --accent-light:#E5D3C7;
+    --rose:#789094;
+    --sand:#E5D3C7;
+    --muted:#8a8278;
+    --rule:#e3dbd1;
+    --white:#fff;
+    --green:#4f7a63;
+    --green-light:#dde9e2;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;font-size:13px;line-height:1.65;min-height:100vh;-webkit-font-smoothing:antialiased}
+  ::selection{background:var(--rose);color:#fff}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+  .header{background:var(--ink);padding:40px 56px 36px;position:relative}
+  .header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--accent)}
+  .back{display:inline-flex;align-items:center;gap:8px;color:rgba(255,255,255,.62);text-decoration:none;font-size:12.5px;margin-bottom:26px;transition:color .2s}
+  .back:hover{color:var(--rose)}
+  .head-top{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:26px}
+  .lang-switch{display:flex;align-items:center;gap:2px;border:1px solid rgba(255,255,255,.25);border-radius:40px;padding:3px;font-size:12px;margin-bottom:0}
+  .lang-switch a{padding:5px 11px;border-radius:40px;text-decoration:none;color:rgba(255,255,255,.62);transition:background .2s,color .2s}
+  .lang-switch a.active{background:var(--accent);color:#fff}
+  .lang-switch a:not(.active):hover{color:#fff}
+  .header h1{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:300;color:var(--white);line-height:1.15;max-width:760px}
+  .header h1 em{font-style:italic;color:var(--rose)}
+  .header-sub{font-size:12.5px;color:rgba(255,255,255,.5);margin-top:12px}
+
+  .main{max-width:840px;margin:0 auto;padding:48px 36px}
+
+  .glance{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:10px;overflow:hidden;margin-bottom:48px}
+  .glance-item{background:var(--white);padding:18px 16px}
+  .glance-label{font-size:11px;letter-spacing:.08em;color:var(--accent);margin-bottom:5px}
+  .glance-value{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:600;line-height:1.25}
+  .glance-note{font-size:11.5px;color:var(--muted);margin-top:3px}
+
+  .section-label{font-size:11.5px;letter-spacing:.1em;color:var(--accent);margin-bottom:18px;display:flex;align-items:center;gap:12px}
+  .section-label::after{content:'';flex:1;height:1px;background:var(--rule)}
+  section{margin-bottom:44px}
+
+  .body-text{color:#5a544f;font-size:14px;line-height:1.78;max-width:700px;font-weight:300}
+  .body-text+.body-text{margin-top:12px}
+
+  ul.plain{margin-top:12px;padding-left:0;list-style:none;max-width:680px}
+  ul.plain li{position:relative;padding-left:20px;margin-bottom:10px;color:#5a544f;font-size:14px;line-height:1.7;font-weight:300}
+  ul.plain li::before{content:'';position:absolute;left:0;top:9px;width:5px;height:5px;border-radius:50%;background:var(--accent)}
+
+  .milestone-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:10px;overflow:hidden;margin-top:18px}
+  .milestone-card{background:var(--white);padding:20px 22px}
+  .milestone-num{font-family:'Cormorant Garamond',serif;font-size:14px;font-weight:600;color:var(--accent);letter-spacing:.06em;margin-bottom:4px}
+  .milestone-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;margin-bottom:8px}
+  .milestone-touch{font-size:12.5px;color:var(--muted);line-height:1.6}
+
+  .results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:10px;overflow:hidden;margin-top:20px}
+  .results-head{background:var(--ink);padding:12px 14px;text-align:center}
+  .results-head span{font-size:11.5px;color:var(--white)}
+  .results-value{background:var(--white);padding:18px 14px;text-align:center}
+  .results-value strong{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--accent);font-weight:600}
+  .results-caption{font-size:12.5px;color:var(--muted);font-style:italic;margin-top:12px;max-width:680px}
+
+  .success-box{background:var(--green-light);border-left:3px solid var(--green);border-radius:0 8px 8px 0;padding:18px 22px;margin-top:8px;max-width:680px}
+  .success-box strong{display:block;font-size:12px;letter-spacing:.06em;color:var(--green);margin-bottom:6px;font-weight:500}
+  .success-box p{font-size:13.5px;color:#2f4a3d;line-height:1.7;font-weight:300}
+
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+  .chip{background:var(--white);border:1px solid var(--rule);border-radius:20px;padding:7px 15px;font-size:12.5px;color:#5a544f;display:flex;align-items:center;gap:7px}
+  .chip::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--accent);flex-shrink:0}
+
+  .cta-box{margin-top:44px;background:var(--ink);border-radius:12px;padding:30px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+  .cta-text h3{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:600;color:var(--white);margin-bottom:6px}
+  .cta-text p{font-size:12.5px;color:rgba(255,255,255,.58);line-height:1.6;max-width:420px}
+  .cta-button{background:var(--accent);color:var(--white);text-decoration:none;font-size:13px;padding:13px 24px;border-radius:40px;white-space:nowrap;display:inline-flex;align-items:center;gap:8px;transition:background .2s}
+  .cta-button:hover{background:var(--accent-deep)}
+
+  .back-bottom{margin-top:44px;padding-top:32px;border-top:1px solid var(--rule);display:flex;justify-content:center}
+
+  .footer{text-align:center;padding:28px 36px;border-top:1px solid var(--rule);font-size:11.5px;color:var(--muted);margin-top:48px}
+  .footer .byline{margin-top:6px;font-size:12px;color:var(--ink)}
+
+  @media (max-width:600px){
+    .header{padding:26px 20px 24px}
+    .header h1{font-size:31px}
+    .main{padding:32px 18px}
+    .glance{grid-template-columns:1fr 1fr}
+    .milestone-grid,.results-grid{grid-template-columns:1fr}
+    .cta-box{flex-direction:column;align-items:flex-start}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none !important}}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="head-top">
+    <a class="back" href="index.html" style="margin-bottom:0">← Voltar ao portfólio</a>
+    <div class="lang-switch">
+      <a href="case-roots-onboarding.html" class="active">PT</a>
+      <a href="case-roots-onboarding-en.html">EN</a>
+    </div>
+  </div>
+  <h1>Construindo um sistema de <em>onboarding</em> que escala</h1>
+  <p class="header-sub">De processos inconsistentes a uma jornada do cliente estruturada e repetível — Roots Global</p>
+</div>
+
+<div class="main">
+
+  <div class="glance">
+    <div class="glance-item">
+      <div class="glance-label">Empresa</div>
+      <div class="glance-value">Roots Global</div>
+      <div class="glance-note">Consultoria de imigração, Portugal</div>
+    </div>
+    <div class="glance-item">
+      <div class="glance-label">Entrega</div>
+      <div class="glance-value">Jornada do cliente</div>
+      <div class="glance-note">Framework de CX ponta a ponta</div>
+    </div>
+    <div class="glance-item">
+      <div class="glance-label">Ferramentas</div>
+      <div class="glance-value">Notion &amp; templates de e-mail</div>
+      <div class="glance-note">Tracker relacional em implementação</div>
+    </div>
+  </div>
+
+  <section>
+    <div class="section-label">Contexto</div>
+    <p class="body-text">A Roots Global é uma consultoria de imigração sediada em Portugal que atende clientes de língua inglesa dos Estados Unidos, Reino Unido, Canadá e Austrália. Conforme a empresa cresceu, a experiência do cliente começou a mostrar fissuras: a qualidade do onboarding variava conforme a pessoa que conduzia o caso, a comunicação era reativa em vez de proativa e não existia um sistema que garantisse o mesmo padrão de atendimento para todo mundo.</p>
+    <p class="body-text">Assumi o desenho e a implementação de um framework de experiência do cliente do zero — cobrindo toda a jornada pós-venda, do primeiro pagamento até a aprovação do visto.</p>
+  </section>
+
+  <section>
+    <div class="section-label">O desafio</div>
+    <p class="body-text">O problema central era inconsistência. Existiam práticas internas, mas eram não documentadas, dependentes de pessoas e variavam bastante entre os tipos de visto (D7, D8, D2, D1, Artigo 15). Isso gerava uma série de efeitos em cascata:</p>
+    <ul class="plain">
+      <li>Clientes recebiam níveis de comunicação diferentes dependendo de quem cuidava do caso</li>
+      <li>O time não tinha uma referência comum do que era um “bom” onboarding</li>
+      <li>Não havia visibilidade sobre em que ponto da jornada cada cliente estava</li>
+      <li>A comunicação reativa gerava ansiedade desnecessária e aumentava o volume de contatos de suporte</li>
+      <li>O acompanhamento vivia numa planilha densa e difícil de navegar, o que dificultava enxergar etapa, pendências e próximos touchpoints de forma rápida</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="section-label">A solução</div>
+    <p class="body-text">Desenhei uma jornada com 4 milestones e 8 touchpoints, padronizando a experiência em todos os tipos de visto e ainda assim permitindo variações específicas onde elas eram necessárias. O framework foi documentado, transformado em templates e reconstruído em um tracker relacional no Notion para uso operacional — substituindo a planilha por um sistema que mostra, em tempo real, a etapa de cada cliente, o que está pendente e qual é o próximo contato.</p>
+
+    <div class="chips">
+      <span class="chip">4 milestones</span>
+      <span class="chip">8 touchpoints estruturados</span>
+      <span class="chip">5 tipos de visto cobertos</span>
+      <span class="chip">Guias de call com 9 seções</span>
+    </div>
+
+    <div class="milestone-grid">
+      <div class="milestone-card">
+        <div class="milestone-num">MILESTONE 01</div>
+        <div class="milestone-title">Pagamento &amp; call de introdução</div>
+        <div class="milestone-touch">Confirmação de pagamento, e-mail de boas-vindas, agendamento da call, resumo pós-call</div>
+      </div>
+      <div class="milestone-card">
+        <div class="milestone-num">MILESTONE 02</div>
+        <div class="milestone-title">Coleta de documentos</div>
+        <div class="milestone-touch">Entrega do checklist, acesso ao portal de submissão, atualizações de progresso</div>
+      </div>
+      <div class="milestone-card">
+        <div class="milestone-num">MILESTONE 03</div>
+        <div class="milestone-title">Submissão do processo</div>
+        <div class="milestone-touch">Confirmação de submissão, briefing de prazos, guia do que esperar</div>
+      </div>
+      <div class="milestone-card">
+        <div class="milestone-num">MILESTONE 04</div>
+        <div class="milestone-title">Aprovação &amp; handoff</div>
+        <div class="milestone-touch">Comunicação da aprovação, guia de próximos passos, check-in pós-serviço</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-label">Resultados</div>
+    <p class="body-text">Medido pelo volume diário de e-mails de clientes (toda a comunicação, não só o onboarding) ao longo de três meses de implementação:</p>
+
+    <div class="results-grid">
+      <div class="results-head"><span>Antes</span></div>
+      <div class="results-head"><span>Durante a implementação</span></div>
+      <div class="results-head"><span>Depois da consolidação</span></div>
+      <div class="results-value"><strong>~50–60 / dia</strong></div>
+      <div class="results-value"><strong>~40 / dia</strong></div>
+      <div class="results-value"><strong>~20–30 / dia</strong></div>
+    </div>
+    <p class="results-caption">O volume diário de comunicação caiu praticamente pela metade, refletindo menos e-mails de “em que pé está?” e de dúvidas conforme a nova estrutura passou a funcionar.</p>
+
+    <ul class="plain" style="margin-top:24px">
+      <li>Onboarding padronizado em todos os tipos de visto — a qualidade deixou de depender de quem atendia</li>
+      <li>Menos comunicação interna improvisada, com responsabilidades claras e timing documentado</li>
+      <li>Uma linguagem operacional comum para falar de etapas e progresso dos clientes</li>
+      <li>Uma base replicável, que continua funcionando conforme o time cresce</li>
+      <li>Menos ansiedade do cliente, graças a uma comunicação proativa em cada etapa</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="section-label">O que eu aprendi</div>
+    <div class="success-box">
+      <strong>Proativo vence reativo</strong>
+      <p>Esse projeto reforçou uma coisa: o trabalho de CX com mais impacto acontece antes de o cliente mandar a primeira mensagem. Quando a comunicação é proativa e estruturada, o cliente se sente seguro — e o volume de suporte cai. O desafio em uma consultoria pequena é construir sistemas rigorosos o suficiente para escalar, mas simples o suficiente para que um time em crescimento realmente use. O framework da Roots foi desenhado nesse equilíbrio: claro o bastante para seguir sem treinamento, flexível o bastante para acomodar as particularidades de cada visto.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-label">Competências aplicadas</div>
+    <div class="chips">
+      <span class="chip">Estratégia de CX</span>
+      <span class="chip">Mapeamento de jornada</span>
+      <span class="chip">Documentação de processos</span>
+      <span class="chip">Sistemas em Notion</span>
+      <span class="chip">Colaboração entre times</span>
+      <span class="chip">Frameworks de onboarding</span>
+    </div>
+  </section>
+
+  <div class="back-bottom">
+    <a class="cta-button" href="index.html">← Voltar ao portfólio</a>
+  </div>
+
+</div>
+
+<div class="footer">
+  <div>Estudo de caso · Jornada e onboarding do cliente</div>
+  <div class="byline">Sara — Global Mobility &amp; Immigration Specialist</div>
+</div>
+
+</body>
+</html>

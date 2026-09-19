@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sara Alves — Global Mobility &amp; Immigration Specialist</title>
+<meta name="description" content="Sara Alves — Global Mobility and Immigration Specialist with end-to-end experience in case management, regulatory compliance and authority coordination. Based in Portugal, open to remote and international opportunities.">
+<meta property="og:title" content="Sara Alves — Global Mobility & Immigration Specialist">
+<meta property="og:description" content="Connecting people to new countries — with structure, compliance and clarity at every step.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F8F6F1;
+    --sand:#E5D3C7;
+    --terra:#0F52BA;
+    --terra-deep:#0B3D8C;
+    --graphite:#242829;
+    --rose:#244B4F;
+    --white:#fff;
+    --ink:#242829;
+    --body:#5a544f;
+    --rule:#e3dbd1;
+    --serif:'Cormorant Garamond',Georgia,serif;
+    --sans:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:16px;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  ::selection{background:var(--rose);color:#fff}
+  :focus-visible{outline:2px solid var(--terra);outline-offset:3px;border-radius:2px}
+
+  .wrap{max-width:1080px;margin:0 auto;padding:0 32px}
+
+  /* ---------- NAV ---------- */
+  .nav{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    background:rgba(247,243,238,.85);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid transparent;
+    transition:border-color .3s;
+  }
+  .nav.scrolled{border-bottom-color:var(--rule)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;max-width:1080px;margin:0 auto;padding:0 32px}
+  .logo{display:flex;align-items:center;gap:11px;text-decoration:none}
+  .logo-mark{
+    width:34px;height:34px;border-radius:50% 50% 50% 4px;
+    background:var(--terra);
+    display:grid;place-items:center;
+    color:#fff;font-family:var(--serif);font-size:18px;font-weight:600;line-height:1;
+    padding-bottom:2px;flex-shrink:0;
+  }
+  .logo-name{font-family:var(--serif);font-size:23px;font-weight:600;letter-spacing:.2px;white-space:nowrap}
+  .nav-links{display:flex;align-items:center;gap:30px}
+  .nav-links a{font-size:14px;color:var(--body);text-decoration:none;position:relative;padding:4px 0;transition:color .2s}
+  .nav-links a::after{content:'';position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--terra);transition:right .3s}
+  .nav-links a:hover{color:var(--terra)}
+  .nav-links a:hover::after{right:0}
+  .nav-cta{
+    background:var(--graphite);color:#fff !important;text-decoration:none;
+    font-size:13.5px;padding:10px 22px;border-radius:40px;transition:background .25s;
+  }
+  .nav-cta:hover{background:var(--terra)}
+  .nav-cta::after{display:none}
+  .lang-switch{
+    display:flex;align-items:center;gap:2px;border:1px solid var(--sand);
+    border-radius:40px;padding:3px;font-size:12.5px;
+  }
+  .lang-switch a{
+    padding:5px 11px;border-radius:40px;text-decoration:none;color:var(--body);
+    transition:background .2s,color .2s;
+  }
+  .lang-switch a::after{display:none}
+  .lang-switch a.active{background:var(--terra);color:#fff}
+  .lang-switch a:not(.active):hover{color:var(--terra)}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;padding:150px 0 0;overflow:hidden}
+  .blob{position:absolute;border-radius:50%;pointer-events:none;z-index:0}
+  .blob-a{width:520px;height:520px;background:var(--sand);opacity:.55;top:-170px;right:-170px}
+  .blob-b{width:260px;height:260px;background:var(--rose);opacity:.22;top:250px;right:150px}
+  .hero .wrap{position:relative;z-index:1}
+
+  .kicker{
+    font-size:12.5px;letter-spacing:.14em;color:var(--terra);
+    display:flex;flex-wrap:wrap;gap:0 10px;margin-bottom:26px;
+  }
+  .kicker span::after{content:'·';margin-left:10px;color:var(--sand)}
+  .kicker span:last-child::after{content:''}
+
+  h1{
+    font-family:var(--serif);
+    font-weight:300;
+    font-size:clamp(40px,6.4vw,76px);
+    line-height:1.08;
+    letter-spacing:-.015em;
+    max-width:16ch;
+  }
+  h1 .line1{font-weight:600}
+  .rotator{color:var(--terra);font-style:italic;font-weight:600;transition:opacity .4s ease}
+  .rotator.fade{opacity:0}
+  h1 .line2{display:block;font-size:.62em;font-weight:300;color:var(--ink);margin-top:.28em;max-width:18ch;line-height:1.24}
+
+  .hero-text{margin-top:34px;max-width:52ch;color:var(--body);font-size:16.5px;font-weight:300}
+  .hero-text p+p{margin-top:14px}
+
+  .btn-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;
+    padding:15px 30px;border-radius:40px;text-decoration:none;
+    font-size:14.5px;transition:transform .2s,background .25s,color .25s,border-color .25s;
+  }
+  .btn-primary{background:var(--terra);color:#fff}
+  .btn-primary:hover{background:var(--terra-deep)}
+  .btn-ghost{border:1px solid var(--sand);color:var(--ink);background:transparent}
+  .btn-ghost:hover{border-color:var(--graphite);background:var(--graphite);color:#fff}
+  .btn:hover{transform:translateY(-2px)}
+
+  .place{margin-top:30px;font-size:14px;color:var(--body);display:flex;align-items:center;gap:10px}
+  .place svg{flex-shrink:0}
+
+  .stats{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+    margin:76px 0 0;border-top:1px solid var(--rule);
+  }
+  .stat{padding:28px 26px 30px 0;border-right:1px solid var(--rule)}
+  .stat:last-child{border-right:0}
+  .stat b{display:block;font-family:var(--serif);font-size:34px;font-weight:600;line-height:1.1;color:var(--terra)}
+  .stat span{display:block;margin-top:7px;font-size:13.5px;color:var(--body);line-height:1.55;max-width:22ch}
+
+  /* ---------- MARQUEE ---------- */
+  .marquee{margin-top:96px;padding:22px 0;background:var(--terra);overflow:hidden;white-space:nowrap}
+  .marquee-track{display:inline-flex;gap:0;animation:slide 44s linear infinite}
+  .marquee-track span{
+    font-family:var(--serif);font-size:25px;font-style:italic;font-weight:300;
+    color:#fff;padding:0 20px;
+  }
+  .marquee-track i{color:var(--sand);font-style:normal;font-size:13px;align-self:center;opacity:.95}
+  @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:110px 0}
+  .sec-head{margin-bottom:56px}
+  .sec-tag{
+    font-size:12.5px;letter-spacing:.14em;color:var(--terra);margin-bottom:18px;
+    display:flex;align-items:center;gap:14px;
+  }
+  .sec-tag::after{content:'';flex:1;height:1px;background:var(--rule);max-width:280px}
+  h2{
+    font-family:var(--serif);font-weight:300;
+    font-size:clamp(30px,4.4vw,50px);line-height:1.14;letter-spacing:-.01em;max-width:19ch;
+  }
+  h2.strong{font-weight:600}
+  .sec-sub{margin-top:18px;max-width:56ch;color:var(--body);font-weight:300}
+
+  /* serviços */
+  .contrib{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:14px;overflow:hidden}
+  .c-card{background:var(--paper);padding:38px 36px 42px;transition:background .3s}
+  .c-card:hover{background:var(--white)}
+  .c-num{font-family:var(--serif);font-size:15px;color:var(--terra);letter-spacing:.06em;margin-bottom:12px}
+  .c-card h3{font-family:var(--serif);font-size:27px;font-weight:600;line-height:1.2;margin-bottom:14px}
+  .c-card p{font-size:14.8px;color:var(--body);font-weight:300;max-width:42ch}
+
+  /* experiência */
+  .exp{border-top:1px solid var(--rule)}
+  .exp-item{padding:52px 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:200px 1fr;gap:48px}
+  .exp-meta .role{font-size:13.5px;color:var(--terra);margin-bottom:8px}
+  .exp-meta .period{font-size:13.5px;color:var(--body)}
+  .exp-body h3{font-family:var(--serif);font-size:33px;font-weight:600;line-height:1.16;margin-bottom:18px}
+  .exp-body p{color:var(--body);font-weight:300;max-width:60ch;font-size:15.5px}
+  .exp-body p+p{margin-top:14px}
+  .exp-figs{display:flex;flex-wrap:wrap;gap:34px;margin-top:28px;padding-top:24px;border-top:1px solid var(--rule)}
+  .fig b{display:block;font-family:var(--serif);font-size:27px;font-weight:600;color:var(--terra);line-height:1.1}
+  .fig span{font-size:13px;color:var(--body)}
+  .link-more{
+    display:inline-flex;align-items:center;gap:8px;margin-top:30px;
+    font-size:14px;color:var(--ink);text-decoration:none;
+    border-bottom:1px solid var(--terra);padding-bottom:4px;transition:gap .25s,color .25s;
+  }
+  .link-more:hover{gap:14px;color:var(--terra)}
+
+  /* como eu trabalho */
+  .method{
+    background:var(--white);border:1px solid var(--rule);
+    border-radius:20px;padding:72px 60px;position:relative;overflow:hidden;
+  }
+  .method::before{
+    content:'';position:absolute;top:-120px;right:-120px;width:320px;height:320px;
+    border-radius:50%;background:var(--sand);opacity:.35;
+  }
+  .method>*{position:relative}
+  .method-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:38px 56px;margin-top:8px}
+  .m-item{border-top:1px solid var(--rule);padding-top:22px}
+  .m-item h3{font-family:var(--serif);font-size:25px;font-weight:600;margin-bottom:10px;color:var(--terra)}
+  .m-item p{font-size:14.8px;color:var(--body);font-weight:300;max-width:40ch}
+  .pull{
+    margin-top:60px;padding:32px 0 0 30px;border-top:1px solid var(--rule);
+    border-left:3px solid var(--terra);
+    font-family:var(--serif);font-weight:600;
+    font-size:clamp(23px,2.9vw,33px);line-height:1.38;color:var(--ink);max-width:30ch;
+  }
+
+  /* sobre */
+  .about{display:grid;grid-template-columns:.85fr 1.25fr;gap:70px;align-items:start}
+  .about-aside{position:relative}
+  .portrait{
+    width:100%;aspect-ratio:4/5;border-radius:190px 190px 16px 16px;
+    overflow:hidden;background:var(--sand);
+  }
+  .portrait img{width:100%;height:100%;object-fit:cover;object-position:center 18%}
+  .about-quote{
+    margin-top:26px;font-family:var(--serif);font-style:italic;font-size:22px;
+    line-height:1.4;color:var(--terra);font-weight:400;
+  }
+  .about-body p{color:var(--body);font-weight:300;max-width:62ch}
+  .about-body p+p{margin-top:17px}
+  .about-body .lead{font-family:var(--serif);font-size:26px;line-height:1.42;color:var(--ink);font-weight:400;max-width:26ch}
+
+  /* competências */
+  .skills{display:flex;flex-wrap:wrap;gap:12px;max-width:900px}
+  .skill{
+    border:1px solid var(--sand);border-radius:40px;padding:11px 22px;
+    font-size:14.5px;color:var(--ink);background:var(--white);
+    transition:background .25s,color .25s,border-color .25s;
+  }
+  .skill:hover{background:var(--terra);border-color:var(--terra);color:#fff}
+
+  /* depoimentos */
+  .quotes{display:flex;flex-direction:column;gap:30px;max-width:780px}
+  .quote{background:var(--white);border:1px solid var(--rule);border-radius:16px;overflow:hidden}
+  .quote-head{
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+    padding:18px 26px;border-bottom:1px solid var(--rule);background:#fbf9f6;
+  }
+  .quote-head strong{font-family:var(--serif);font-size:21px;font-weight:600}
+  .quote-head span{display:block;font-size:12.5px;color:var(--body);font-weight:300;margin-top:-2px}
+  .quote-source{font-size:12px;color:var(--terra);letter-spacing:.06em;white-space:nowrap}
+  .shot{padding:22px 26px 6px}
+  .shot img{border:1px solid var(--rule);border-radius:8px;width:100%}
+  .translation{padding:8px 26px 28px}
+  .translation summary{
+    cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:8px;
+    font-size:13.5px;color:var(--terra);padding:10px 0;
+  }
+  .translation summary::-webkit-details-marker{display:none}
+  .translation summary::after{content:'▾';transition:transform .25s;font-size:11px}
+  .translation[open] summary::after{transform:rotate(180deg)}
+  .translation .txt{
+    font-size:14.5px;color:var(--body);font-weight:300;line-height:1.75;
+    border-left:2px solid var(--sand);padding-left:18px;margin-top:6px;
+  }
+  .translation .txt p+p{margin-top:12px}
+
+  /* contato */
+  .contact{padding-bottom:0}
+  .contact-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+  .contact h2{max-width:14ch}
+  .contact p{color:var(--body);font-weight:300;margin-top:20px;max-width:46ch}
+  .contact-actions{display:flex;flex-direction:column;gap:14px;align-items:stretch}
+  .contact-actions .btn{justify-content:center}
+
+  footer.site{
+    margin-top:110px;border-top:1px solid var(--rule);padding:30px 0 38px;
+    display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;
+    font-size:13px;color:var(--body);
+  }
+  footer.site a{text-decoration:none}
+  footer.site a:hover{color:var(--terra)}
+
+  .reveal{opacity:0;transform:translateY(18px)}
+  .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.3,1)}
+
+  @media (max-width:900px){
+    .nav-links{gap:18px}
+    .nav-links a:not(.nav-cta){display:none}
+    .stats{grid-template-columns:1fr 1fr}
+    .stat{border-right:0;padding:24px 20px 24px 0}
+    .stat:nth-child(odd){border-right:1px solid var(--rule);padding-right:24px}
+    .contrib{grid-template-columns:1fr}
+    .exp-item{grid-template-columns:1fr;gap:20px}
+    .method{padding:48px 26px;border-radius:14px}
+    .method-grid{grid-template-columns:1fr;gap:28px}
+    .pull{padding-left:20px}
+    .about{grid-template-columns:1fr;gap:40px}
+    .portrait{max-width:340px}
+    .contact-inner{grid-template-columns:1fr;gap:34px;align-items:start}
+  }
+  @media (max-width:600px){
+    .wrap,.nav-inner{padding:0 20px}
+    section{padding:76px 0}
+    .hero{padding-top:118px}
+    .blob-a{width:300px;height:300px;top:-110px;right:-110px}
+    .blob-b{display:none}
+    .marquee-track span{font-size:20px}
+    .quote-head{flex-direction:column;align-items:flex-start;gap:6px}
+    .shot,.translation{padding-left:16px;padding-right:16px}
+    footer.site{flex-direction:column;align-items:flex-start;gap:8px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none !important;transition:none !important;scroll-behavior:auto !important}
+    .reveal{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="logo" href="#top">
+      <span class="logo-mark">S</span>
+      <span class="logo-name">Sara Alves</span>
+    </a>
+    <div class="nav-links">
+      <a href="#atuacao">Services</a>
+      <a href="#experiencia">Experience</a>
+      <a href="#sobre">About</a>
+      <a class="nav-cta" href="#contato">Contact</a>
+      <div class="lang-switch">
+        <a href="index.html">PT</a>
+        <a href="index-en.html" class="active">EN</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="top">
+  <div class="blob blob-a"></div>
+  <div class="blob blob-b"></div>
+  <div class="wrap">
+    <div class="kicker">
+      <span>Global Mobility</span><span>Immigration</span><span>Case Management</span><span>Compliance</span><span>Process Design</span>
+    </div>
+
+    <h1>
+      <span class="line1">Connecting people to <span class="rotator" id="word">new countries</span></span>
+      <span class="line2">and turning complex immigration processes into clear, secure, human journeys.</span>
+    </h1>
+
+    <div class="hero-text">
+      <p>I'm Sara, a Global Mobility and Immigration Specialist with end-to-end experience in visa processes, residence permits and regulatory compliance for clients around the world.</p>
+      <p>I help companies and individuals move across countries with structure, clarity and a genuinely human experience — from eligibility all the way to final approval.</p>
+    </div>
+
+    <div class="btn-row">
+      <a class="btn btn-primary" href="#experiencia">See my experience</a>
+      <a class="btn btn-ghost" href="#contato">Let's talk</a>
+    </div>
+
+    <p class="place">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#244B4F" stroke-width="2" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+      Based in Portugal · open to Global Mobility and Immigration roles, remote or international
+    </p>
+
+    <div class="stats">
+      <div class="stat"><b>1000+</b><span>clients guided through immigration and international relocation processes</span></div>
+      <div class="stat"><b>5 visas</b><span>D1, D2, D7, D8 and Article 15 covered end-to-end</span></div>
+      <div class="stat"><b>PT · EN</b><span>multilingual communication with clients and authorities</span></div>
+      <div class="stat"><b>AIMA</b><span>direct coordination with consulates, embassies and Portuguese authorities</span></div>
+    </div>
+  </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track" id="track"></div>
+  </div>
+</header>
+
+<!-- ================= SERVIÇOS ================= -->
+<section id="atuacao">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-tag">Areas of expertise</div>
+      <h2 class="strong">From eligibility to approval — with structure at every step.</h2>
+      <p class="sec-sub">Four areas that support any immigration or global mobility operation, whether as part of an internal team or through one-off projects and consulting engagements.</p>
+    </div>
+
+    <div class="contrib reveal">
+      <div class="c-card">
+        <div class="c-num">01</div>
+        <h3>End-to-End Case Management</h3>
+        <p>Leading immigration processes from first contact to approval — eligibility consultations, document preparation, submission and ongoing case follow-up.</p>
+      </div>
+      <div class="c-card">
+        <div class="c-num">02</div>
+        <h3>Compliance &amp; Risk Management</h3>
+        <p>Ensuring adherence to legal requirements, identifying potential blockers early and mitigating risks throughout the journey.</p>
+      </div>
+      <div class="c-card">
+        <div class="c-num">03</div>
+        <h3>Stakeholder &amp; Client Experience</h3>
+        <p>Clear communication across clients, internal teams and authorities — aligning expectations, timelines and next steps at every stage of the process.</p>
+      </div>
+      <div class="c-card">
+        <div class="c-num">04</div>
+        <h3>Process, Policy &amp; Continuous Improvement</h3>
+        <p>Designing frameworks, documenting processes and optimizing workflows — like the 4-milestone, 8-touchpoint system I implemented at Roots Global.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERIÊNCIA ================= -->
+<section id="experiencia">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-tag">Experience</div>
+      <h2>A career built around immigration and international mobility.</h2>
+    </div>
+
+    <div class="exp reveal">
+      <article class="exp-item">
+        <div class="exp-meta">
+          <div class="role">Global Mobility · Case Management · Compliance</div>
+          <div class="period">Roots Global — Global Immigration Specialist · Aug 2025 – Present</div>
+        </div>
+        <div class="exp-body">
+          <h3>Structure and compliance across end-to-end immigration processes.</h3>
+          <p>I guide international clients through the entire relocation and immigration process to Portugal, focusing on clarity, structure and a smooth experience even amid regulatory complexity.</p>
+          <p>I lead onboarding conversations and align eligibility, timelines and next steps, while preparing, reviewing and submitting documentation packages with accuracy and regulatory compliance.</p>
+          <p>I coordinate across Portuguese authorities — embassies, consulates, city halls and AIMA — to keep applications moving forward, and I restructured the entire client journey into 4 milestones and 8 touchpoints, now documented as a replicable framework.</p>
+          <div class="exp-figs">
+            <div class="fig"><b>800+</b><span>clients supported</span></div>
+            <div class="fig"><b>5 visa types</b><span>D1, D2, D7, D8 and Article 15</span></div>
+            <div class="fig"><b>AIMA · Consulates</b><span>direct authority coordination</span></div>
+          </div>
+          <a class="link-more" href="case-roots-onboarding-en.html">See the full case study ↗</a>
+        </div>
+      </article>
+
+      <article class="exp-item">
+        <div class="exp-meta">
+          <div class="role">Immigration Case Management</div>
+          <div class="period">Viv Europe — Immigration Case Manager · Jun 2024 – Jun 2025</div>
+        </div>
+        <div class="exp-body">
+          <h3>Personalized immigration roadmaps, from start to finish.</h3>
+          <p>I conducted comprehensive consultations to assess client eligibility across different visa categories for Portugal, developing personalized roadmaps and timelines for each case.</p>
+          <p>I supported clients in gathering and preparing all required documentation, ensuring every application met immigration requirements accurately — with consistent communication by e-mail and video call throughout the process.</p>
+          <p>I also collaborated with the Marketing team on content creation and kept administrative processes and internal systems up to date, optimizing workflows along the way.</p>
+          <div class="exp-figs">
+            <div class="fig"><b>150+</b><span>clients supported</span></div>
+            <div class="fig"><b>Documentation</b><span>accuracy and compliance at every step</span></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMO EU TRABALHO ================= -->
+<section id="metodo">
+  <div class="wrap">
+    <div class="method reveal">
+      <div class="sec-head">
+        <div class="sec-tag">How I work</div>
+        <h2>My approach to running an immigration process.</h2>
+      </div>
+      <div class="method-grid">
+        <div class="m-item">
+          <h3>Map the full picture</h3>
+          <p>Understand the background, the goal and the particularities of each case before recommending a path.</p>
+        </div>
+        <div class="m-item">
+          <h3>Translate complexity into clarity</h3>
+          <p>Explain legal requirements and timelines simply, without ever losing technical rigor.</p>
+        </div>
+        <div class="m-item">
+          <h3>Anticipate risk</h3>
+          <p>Spot potential procedural blockers before they become real problems.</p>
+        </div>
+        <div class="m-item">
+          <h3>Coordinate multiple fronts</h3>
+          <p>Align clients, internal teams and authorities on a single, shared timeline.</p>
+        </div>
+        <div class="m-item">
+          <h3>Keep improving the process</h3>
+          <p>Every case is a chance to make the next one clearer and more efficient.</p>
+        </div>
+      </div>
+      <p class="pull">To me, immigration done well is the combination of compliance, empathy, organization and communication that never leaves anyone in the dark.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SOBRE ================= -->
+<section id="sobre">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-tag">About Sara</div>
+      <h2>A little about the person behind the process.</h2>
+    </div>
+
+    <div class="about reveal">
+      <aside class="about-aside">
+        <div class="portrait"><img src="assets/sara.jpg" alt="Sara Alves"></div>
+        <p class="about-quote">"I've lived the move I now help other people make."</p>
+      </aside>
+
+      <div class="about-body">
+        <p class="lead">Almost five years ago, I lived firsthand what I now help other people go through: I packed my bags and moved to Portugal.</p>
+        <p>Since then, a lot has changed — not just where I live, but how I see the world, other people, and the many different ways there are to live a life. Leaving my home country broadened my frame of reference, taught me to navigate bureaucracy, deadlines and uncertainty, and deepened a curiosity I've always had for stories, cultures and systems.</p>
+        <p>Maybe that's why I found in immigration work a space that fits me so well. I like understanding each person's context, what they need, what worries them, and what makes them trust a process that can often feel overwhelming.</p>
+        <p>Outside of work, I'm driven by that same curiosity. I love working out, traveling, discovering new places, a good brunch and quality time with the people I love. I have two dogs who take up a considerable part of my heart and my routine. I now live in Nazaré, home of the famous giant waves — and whenever I can, I'm chasing a sunset on the beach.</p>
+        <p>In the end, I think my work and my life meet in the same place: curiosity about people, about processes, and about the ways different systems and cultures connect.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FORMAÇÃO & IDIOMAS ================= -->
+<section id="formacao" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-tag">Education &amp; Languages</div>
+      <h2>Academic background, languages and continuous learning.</h2>
+    </div>
+
+    <div class="contrib reveal" style="grid-template-columns:1fr 1fr 1fr">
+      <div class="c-card">
+        <div class="c-num">Education</div>
+        <h3>Universidade de Aveiro</h3>
+        <p>Master's degree, Management, Marketing and International Business</p>
+        <h3 style="margin-top:20px">Centro Universitário Don Domênico</h3>
+        <p>Bachelor's degree, Business Administration</p>
+      </div>
+      <div class="c-card">
+        <div class="c-num">Continuing education</div>
+        <h3>Global Mobility</h3>
+        <p>London School of Business Administration – LSBA · 2026 – present</p>
+        <h3 style="margin-top:20px">Immigration &amp; Nationality Law</h3>
+        <p>CRIAP · May–July 2026</p>
+      </div>
+      <div class="c-card">
+        <div class="c-num">Languages</div>
+        <h3>PT · EN</h3>
+        <p>Portuguese (native) · English (full professional proficiency)</p>
+      </div>
+    </div>
+
+    <p class="sec-sub" style="margin-top:32px">Certifications: Google Analytics · Enterprise Design Thinking Practitioner</p>
+  </div>
+</section>
+
+<!-- ================= COMPETÊNCIAS ================= -->
+<section id="competencias" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-tag">Skills</div>
+      <h2>What I bring into an operation.</h2>
+    </div>
+    <div class="skills reveal">
+      <span class="skill">Global Mobility</span>
+      <span class="skill">Immigration &amp; Visas</span>
+      <span class="skill">Cross-Border Compliance</span>
+      <span class="skill">Case Management</span>
+      <span class="skill">Cross-Cultural Communication</span>
+      <span class="skill">Stakeholder Management</span>
+      <span class="skill">Risk Management</span>
+      <span class="skill">Process Design</span>
+      <span class="skill">Documentation &amp; Compliance</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DEPOIMENTOS ================= -->
+<section id="depoimentos" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-tag">Testimonials</div>
+      <h2>What people I've worked with have to say.</h2>
+    </div>
+
+    <div class="quotes reveal">
+
+      <article class="quote">
+        <div class="quote-head">
+          <div>
+            <strong>Victor Queiroz</strong>
+            <span>Attorney · International, Corporate and Immigration Law · Sara's direct manager at Viv Europe</span>
+          </div>
+          <div class="quote-source">LinkedIn recommendation</div>
+        </div>
+        <div class="shot"><img src="assets/depoimento-victor.jpg" alt="Victor Queiroz's LinkedIn recommendation" loading="lazy"></div>
+      </article>
+
+      <article class="quote">
+        <div class="quote-head">
+          <div>
+            <strong>Jonathan</strong>
+            <span>Client · Portugal visa process</span>
+          </div>
+          <div class="quote-source">Client e-mail</div>
+        </div>
+        <div class="shot"><img src="assets/depoimento-jonathan.jpg" alt="Thank-you e-mail from client Jonathan" loading="lazy"></div>
+      </article>
+
+      <article class="quote">
+        <div class="quote-head">
+          <div>
+            <strong>Ahmed Mashhour</strong>
+            <span>Client · Portugal D8 visa</span>
+          </div>
+          <div class="quote-source">★★★★★ review</div>
+        </div>
+        <div class="shot"><img src="assets/depoimento-ahmed.jpg" alt="Ahmed Mashhour's five-star review" loading="lazy"></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTATO ================= -->
+<section class="contact" id="contato">
+  <div class="wrap">
+    <div class="contact-inner reveal">
+      <div>
+        <div class="sec-tag">Contact</div>
+        <h2>Let's talk?</h2>
+        <p>I'm open to opportunities in Global Mobility, Immigration, Cross-Border Compliance and Case Management, remote or international.</p>
+      </div>
+      <div class="contact-actions">
+        <a class="btn btn-primary" href="mailto:alves.sara@live.com">Send an e-mail ↗</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/allvessara" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+
+    <footer class="site">
+      <span>© <span id="year">2026</span> Sara Alves · Global Mobility &amp; Immigration</span>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+  </div>
+</section>
+
+<script>
+  // Palavra rotativa do hero (troca suave)
+  (function(){
+    var words = ['new countries','new opportunities','new beginnings'];
+    var el = document.getElementById('word');
+    if(!el || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var i = 0;
+    setInterval(function(){
+      el.classList.add('fade');
+      setTimeout(function(){
+        i = (i + 1) % words.length;
+        el.textContent = words[i];
+        el.classList.remove('fade');
+      }, 400);
+    }, 2800);
+  })();
+
+  // Marquee de competências
+  (function(){
+    var tags = ['Global Mobility','Immigration Compliance','Case Management','Cross-Border Coordination','Process Design','Visa & Residency','Stakeholder Management','Risk Mitigation','Client Experience'];
+    var track = document.getElementById('track');
+    if(!track) return;
+    var html = tags.map(function(t){ return '<span>'+t+'</span><i>◆</i>'; }).join('');
+    track.innerHTML = html + html;
+  })();
+
+  // Borda da nav ao rolar
+  (function(){
+    var nav = document.getElementById('nav');
+    var onScroll = function(){ nav.classList.toggle('scrolled', window.scrollY > 12); };
+    window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+  })();
+
+  // Revelação suave
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)){ els.forEach(function(e){e.classList.add('in');}); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, {threshold:.08, rootMargin:'0px 0px -40px'});
+    els.forEach(function(e){ io.observe(e); });
+  })();
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
