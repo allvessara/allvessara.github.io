@@ -7,21 +7,23 @@
 <meta name="description" content="Como reestruturei a jornada do cliente de uma consultoria de imigração em 4 milestones e 8 touchpoints — reduzindo o volume de e-mails pela metade.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#292929;
-    --paper:#F7F3EE;
-    --accent:#B86B5E;
-    --accent-deep:#9d5347;
-    --accent-light:#F2E1DA;
-    --rose:#C99391;
-    --sand:#DDD0C2;
-    --muted:#8a8278;
-    --rule:#e3dbd1;
+    --ink:#1F2D3A;
+    --paper:#FBF6EE;
+    --accent:#2A6F97;
+    --accent-deep:#1F5878;
+    --accent-light:#DCEAF2;
+    --rose:#F2A98A;
+    --sand:#F6DCCB;
+    --muted:#5F6F7D;
+    --rule:#E8DDD0;
     --white:#fff;
-    --green:#4f7a63;
-    --green-light:#dde9e2;
+    --green:#2A6F97;
+    --green-light:#E3EEF5;
+    --gold:#C9A24B;
+    --display:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   body{background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;font-size:13px;line-height:1.65;min-height:100vh;-webkit-font-smoothing:antialiased}
@@ -29,7 +31,7 @@
   :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 
   .header{background:var(--ink);padding:40px 56px 36px;position:relative}
-  .header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--accent)}
+  .header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--gold)}
   .back{display:inline-flex;align-items:center;gap:8px;color:rgba(255,255,255,.62);text-decoration:none;font-size:12.5px;margin-bottom:26px;transition:color .2s}
   .back:hover{color:var(--rose)}
   .head-top{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:26px}
@@ -37,7 +39,7 @@
   .lang-switch a{padding:5px 11px;border-radius:40px;text-decoration:none;color:rgba(255,255,255,.62);transition:background .2s,color .2s}
   .lang-switch a.active{background:var(--accent);color:#fff}
   .lang-switch a:not(.active):hover{color:#fff}
-  .header h1{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:300;color:var(--white);line-height:1.15;max-width:760px}
+  .header h1{font-family:var(--display);font-size:44px;font-weight:300;color:var(--white);line-height:1.15;max-width:760px}
   .header h1 em{font-style:italic;color:var(--rose)}
   .header-sub{font-size:12.5px;color:rgba(255,255,255,.5);margin-top:12px}
 
@@ -46,43 +48,43 @@
   .glance{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:10px;overflow:hidden;margin-bottom:48px}
   .glance-item{background:var(--white);padding:18px 16px}
   .glance-label{font-size:11px;letter-spacing:.08em;color:var(--accent);margin-bottom:5px}
-  .glance-value{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:600;line-height:1.25}
+  .glance-value{font-family:var(--display);font-size:19px;font-weight:600;line-height:1.25}
   .glance-note{font-size:11.5px;color:var(--muted);margin-top:3px}
 
   .section-label{font-size:11.5px;letter-spacing:.1em;color:var(--accent);margin-bottom:18px;display:flex;align-items:center;gap:12px}
   .section-label::after{content:'';flex:1;height:1px;background:var(--rule)}
   section{margin-bottom:44px}
 
-  .body-text{color:#5a544f;font-size:14px;line-height:1.78;max-width:700px;font-weight:300}
+  .body-text{color:#4A5A68;font-size:14px;line-height:1.78;max-width:700px;font-weight:300}
   .body-text+.body-text{margin-top:12px}
 
   ul.plain{margin-top:12px;padding-left:0;list-style:none;max-width:680px}
-  ul.plain li{position:relative;padding-left:20px;margin-bottom:10px;color:#5a544f;font-size:14px;line-height:1.7;font-weight:300}
+  ul.plain li{position:relative;padding-left:20px;margin-bottom:10px;color:#4A5A68;font-size:14px;line-height:1.7;font-weight:300}
   ul.plain li::before{content:'';position:absolute;left:0;top:9px;width:5px;height:5px;border-radius:50%;background:var(--accent)}
 
   .milestone-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:10px;overflow:hidden;margin-top:18px}
   .milestone-card{background:var(--white);padding:20px 22px}
-  .milestone-num{font-family:'Cormorant Garamond',serif;font-size:14px;font-weight:600;color:var(--accent);letter-spacing:.06em;margin-bottom:4px}
-  .milestone-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;margin-bottom:8px}
+  .milestone-num{font-family:var(--display);font-size:14px;font-weight:600;color:var(--accent);letter-spacing:.06em;margin-bottom:4px}
+  .milestone-title{font-family:var(--display);font-size:20px;font-weight:600;margin-bottom:8px}
   .milestone-touch{font-size:12.5px;color:var(--muted);line-height:1.6}
 
   .results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:10px;overflow:hidden;margin-top:20px}
   .results-head{background:var(--ink);padding:12px 14px;text-align:center}
   .results-head span{font-size:11.5px;color:var(--white)}
   .results-value{background:var(--white);padding:18px 14px;text-align:center}
-  .results-value strong{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--accent);font-weight:600}
+  .results-value strong{font-family:var(--display);font-size:22px;color:var(--accent);font-weight:600}
   .results-caption{font-size:12.5px;color:var(--muted);font-style:italic;margin-top:12px;max-width:680px}
 
   .success-box{background:var(--green-light);border-left:3px solid var(--green);border-radius:0 8px 8px 0;padding:18px 22px;margin-top:8px;max-width:680px}
   .success-box strong{display:block;font-size:12px;letter-spacing:.06em;color:var(--green);margin-bottom:6px;font-weight:500}
-  .success-box p{font-size:13.5px;color:#2f4a3d;line-height:1.7;font-weight:300}
+  .success-box p{font-size:13.5px;color:#1F2D3A;line-height:1.7;font-weight:300}
 
   .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
-  .chip{background:var(--white);border:1px solid var(--rule);border-radius:20px;padding:7px 15px;font-size:12.5px;color:#5a544f;display:flex;align-items:center;gap:7px}
+  .chip{background:var(--white);border:1px solid var(--rule);border-radius:20px;padding:7px 15px;font-size:12.5px;color:#4A5A68;display:flex;align-items:center;gap:7px}
   .chip::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--accent);flex-shrink:0}
 
   .cta-box{margin-top:44px;background:var(--ink);border-radius:12px;padding:30px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
-  .cta-text h3{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:600;color:var(--white);margin-bottom:6px}
+  .cta-text h3{font-family:var(--display);font-size:21px;font-weight:600;color:var(--white);margin-bottom:6px}
   .cta-text p{font-size:12.5px;color:rgba(255,255,255,.58);line-height:1.6;max-width:420px}
   .cta-button{background:var(--accent);color:var(--white);text-decoration:none;font-size:13px;padding:13px 24px;border-radius:40px;white-space:nowrap;display:inline-flex;align-items:center;gap:8px;transition:background .2s}
   .cta-button:hover{background:var(--accent-deep)}
@@ -100,7 +102,18 @@
     .milestone-grid,.results-grid{grid-template-columns:1fr}
     .cta-box{flex-direction:column;align-items:flex-start}
   }
-  @media (prefers-reduced-motion:reduce){*{transition:none !important}}
+
+  .header h1{font-size:38px;font-weight:300;letter-spacing:-.03em}
+  .header h1 em{font-style:normal;font-weight:300}
+  .glance-value{font-size:17px;font-weight:300}
+  .milestone-num{font-size:12.5px;font-weight:500;letter-spacing:.08em}
+  .milestone-title{font-size:18px;font-weight:300}
+  .results-value strong{font-size:20px;font-weight:300}
+  .cta-text h3{font-size:19px;font-weight:300}
+  .section-label::after{background:var(--gold)}
+  .cta-button{background:var(--gold);color:var(--ink)}
+  .cta-button:hover{background:#B8903A}
+  @media (max-width:600px){.header h1{font-size:28px}}
 </style>
 </head>
 <body>

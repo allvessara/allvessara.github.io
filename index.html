@@ -6,24 +6,26 @@
 <title>Sara Alves — Comercial, Closing &amp; Client Experience</title>
 <meta name="description" content="Sara Alves — profissional de comercial com atuação em vendas consultivas, closing, partnerships, onboarding e client experience. Baseada em Nazaré, Portugal, aberta a oportunidades remotas e internacionais.">
 <meta property="og:title" content="Sara Alves — Comercial, Closing & Client Experience">
-<meta property="og:description" content="Conectando pessoas, soluções e oportunidades — e transformando relacionamento em confiança, conversão e continuidade.">
+<meta property="og:description" content="Conectando pessoas, ideias e oportunidades — e transformando relacionamento em confiança, conversão e continuidade.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#F7F3EE;
-    --sand:#DDD0C2;
-    --terra:#B86B5E;
-    --terra-deep:#9d5347;
-    --graphite:#292929;
-    --rose:#C99391;
+    --paper:#FBF6EE;
+    --sand:#F6DCCB;
+    --terra:#2A6F97;
+    --terra-deep:#1F5878;
+    --graphite:#1F2D3A;
+    --rose:#F2A98A;
+    --gold:#C9A24B;
     --white:#fff;
-    --ink:#292929;
-    --body:#5a544f;
-    --rule:#e3dbd1;
-    --serif:'Cormorant Garamond',Georgia,serif;
+    --ink:#1F2D3A;
+    --body:#4A5A68;
+    --rule:#E8DDD0;
+    --display:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    --voice:var(--display);
     --sans:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   }
 
@@ -40,7 +42,7 @@
   }
   a{color:inherit}
   img{max-width:100%;display:block}
-  ::selection{background:var(--rose);color:#fff}
+  ::selection{background:var(--rose);color:var(--ink)}
   :focus-visible{outline:2px solid var(--terra);outline-offset:3px;border-radius:2px}
 
   .wrap{max-width:1080px;margin:0 auto;padding:0 32px}
@@ -48,7 +50,7 @@
   /* ---------- NAV ---------- */
   .nav{
     position:fixed;top:0;left:0;right:0;z-index:50;
-    background:rgba(247,243,238,.85);
+    background:rgba(251,246,238,.88);
     backdrop-filter:blur(12px);
     border-bottom:1px solid transparent;
     transition:border-color .3s;
@@ -60,10 +62,10 @@
     width:34px;height:34px;border-radius:50% 50% 50% 4px;
     background:var(--terra);
     display:grid;place-items:center;
-    color:#fff;font-family:var(--serif);font-size:18px;font-weight:600;line-height:1;
+    color:#fff;font-family:var(--display);font-size:18px;font-weight:600;line-height:1;
     padding-bottom:2px;flex-shrink:0;
   }
-  .logo-name{font-family:var(--serif);font-size:23px;font-weight:600;letter-spacing:.2px;white-space:nowrap}
+  .logo-name{font-family:var(--display);font-size:23px;font-weight:600;letter-spacing:.2px;white-space:nowrap}
   .nav-links{display:flex;align-items:center;gap:30px}
   .nav-links a{font-size:14px;color:var(--body);text-decoration:none;position:relative;padding:4px 0;transition:color .2s}
   .nav-links a::after{content:'';position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--terra);transition:right .3s}
@@ -98,11 +100,11 @@
     font-size:12.5px;letter-spacing:.14em;color:var(--terra);
     display:flex;flex-wrap:wrap;gap:0 10px;margin-bottom:26px;
   }
-  .kicker span::after{content:'·';margin-left:10px;color:var(--sand)}
+  .kicker span::after{content:'·';margin-left:10px;color:var(--gold)}
   .kicker span:last-child::after{content:''}
 
   h1{
-    font-family:var(--serif);
+    font-family:var(--display);
     font-weight:300;
     font-size:clamp(40px,6.4vw,76px);
     line-height:1.08;
@@ -110,8 +112,6 @@
     max-width:16ch;
   }
   h1 .line1{font-weight:600}
-  .rotator{color:var(--terra);font-style:italic;font-weight:600;transition:opacity .4s ease}
-  .rotator.fade{opacity:0}
   h1 .line2{display:block;font-size:.62em;font-weight:300;color:var(--ink);margin-top:.28em;max-width:18ch;line-height:1.24}
 
   .hero-text{margin-top:34px;max-width:52ch;color:var(--body);font-size:16.5px;font-weight:300}
@@ -138,17 +138,17 @@
   }
   .stat{padding:28px 26px 30px 0;border-right:1px solid var(--rule)}
   .stat:last-child{border-right:0}
-  .stat b{display:block;font-family:var(--serif);font-size:34px;font-weight:600;line-height:1.1;color:var(--terra)}
+  .stat b{display:block;font-family:var(--display);font-size:34px;font-weight:600;line-height:1.1;color:var(--terra)}
   .stat span{display:block;margin-top:7px;font-size:13.5px;color:var(--body);line-height:1.55;max-width:22ch}
 
   /* ---------- MARQUEE ---------- */
   .marquee{margin-top:96px;padding:22px 0;background:var(--graphite);overflow:hidden;white-space:nowrap}
   .marquee-track{display:inline-flex;gap:0;animation:slide 44s linear infinite}
   .marquee-track span{
-    font-family:var(--serif);font-size:25px;font-style:italic;font-weight:300;
+    font-family:var(--display);font-size:25px;font-style:italic;font-weight:300;
     color:rgba(255,255,255,.88);padding:0 20px;
   }
-  .marquee-track i{color:var(--rose);font-style:normal;font-size:13px;align-self:center;opacity:.9}
+  .marquee-track i{color:var(--gold);font-style:normal;font-size:13px;align-self:center;opacity:.9}
   @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
   /* ---------- SECTIONS ---------- */
@@ -160,7 +160,7 @@
   }
   .sec-tag::after{content:'';flex:1;height:1px;background:var(--rule);max-width:280px}
   h2{
-    font-family:var(--serif);font-weight:300;
+    font-family:var(--display);font-weight:300;
     font-size:clamp(30px,4.4vw,50px);line-height:1.14;letter-spacing:-.01em;max-width:19ch;
   }
   h2.strong{font-weight:600}
@@ -170,8 +170,8 @@
   .contrib{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:14px;overflow:hidden}
   .c-card{background:var(--paper);padding:38px 36px 42px;transition:background .3s}
   .c-card:hover{background:var(--white)}
-  .c-num{font-family:var(--serif);font-size:15px;color:var(--terra);letter-spacing:.06em;margin-bottom:12px}
-  .c-card h3{font-family:var(--serif);font-size:27px;font-weight:600;line-height:1.2;margin-bottom:14px}
+  .c-num{font-family:var(--display);font-size:15px;color:var(--terra);letter-spacing:.06em;margin-bottom:12px}
+  .c-card h3{font-family:var(--display);font-size:27px;font-weight:600;line-height:1.2;margin-bottom:14px}
   .c-card p{font-size:14.8px;color:var(--body);font-weight:300;max-width:42ch}
 
   /* experiência */
@@ -179,11 +179,11 @@
   .exp-item{padding:52px 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:200px 1fr;gap:48px}
   .exp-meta .role{font-size:13.5px;color:var(--terra);margin-bottom:8px}
   .exp-meta .period{font-size:13.5px;color:var(--body)}
-  .exp-body h3{font-family:var(--serif);font-size:33px;font-weight:600;line-height:1.16;margin-bottom:18px}
+  .exp-body h3{font-family:var(--display);font-size:33px;font-weight:600;line-height:1.16;margin-bottom:18px}
   .exp-body p{color:var(--body);font-weight:300;max-width:60ch;font-size:15.5px}
   .exp-body p+p{margin-top:14px}
   .exp-figs{display:flex;flex-wrap:wrap;gap:34px;margin-top:28px;padding-top:24px;border-top:1px solid var(--rule)}
-  .fig b{display:block;font-family:var(--serif);font-size:27px;font-weight:600;color:var(--terra);line-height:1.1}
+  .fig b{display:block;font-family:var(--display);font-size:27px;font-weight:600;color:var(--terra);line-height:1.1}
   .fig span{font-size:13px;color:var(--body)}
   .link-more{
     display:inline-flex;align-items:center;gap:8px;margin-top:30px;
@@ -204,12 +204,12 @@
   .method>*{position:relative}
   .method-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:38px 56px;margin-top:8px}
   .m-item{border-top:1px solid var(--rule);padding-top:22px}
-  .m-item h3{font-family:var(--serif);font-size:25px;font-weight:600;margin-bottom:10px;color:var(--terra)}
+  .m-item h3{font-family:var(--display);font-size:25px;font-weight:600;margin-bottom:10px;color:var(--terra)}
   .m-item p{font-size:14.8px;color:var(--body);font-weight:300;max-width:40ch}
   .pull{
     margin-top:60px;padding:32px 0 0 30px;border-top:1px solid var(--rule);
     border-left:3px solid var(--terra);
-    font-family:var(--serif);font-weight:600;
+    font-family:var(--voice);font-weight:600;
     font-size:clamp(23px,2.9vw,33px);line-height:1.38;color:var(--ink);max-width:30ch;
   }
 
@@ -222,12 +222,12 @@
   }
   .portrait img{width:100%;height:100%;object-fit:cover;object-position:center 18%}
   .about-quote{
-    margin-top:26px;font-family:var(--serif);font-style:italic;font-size:22px;
+    margin-top:26px;font-family:var(--voice);font-style:italic;font-size:22px;
     line-height:1.4;color:var(--terra);font-weight:400;
   }
   .about-body p{color:var(--body);font-weight:300;max-width:62ch}
   .about-body p+p{margin-top:17px}
-  .about-body .lead{font-family:var(--serif);font-size:26px;line-height:1.42;color:var(--ink);font-weight:400;max-width:26ch}
+  .about-body .lead{font-family:var(--voice);font-size:26px;line-height:1.42;color:var(--ink);font-weight:400;max-width:26ch}
 
   /* competências */
   .skills{display:flex;flex-wrap:wrap;gap:12px;max-width:900px}
@@ -243,9 +243,9 @@
   .quote{background:var(--white);border:1px solid var(--rule);border-radius:16px;overflow:hidden}
   .quote-head{
     display:flex;align-items:center;justify-content:space-between;gap:16px;
-    padding:18px 26px;border-bottom:1px solid var(--rule);background:#fbf9f6;
+    padding:18px 26px;border-bottom:1px solid var(--rule);background:#FDFAF5;
   }
-  .quote-head strong{font-family:var(--serif);font-size:21px;font-weight:600}
+  .quote-head strong{font-family:var(--display);font-size:21px;font-weight:600}
   .quote-head span{display:block;font-size:12.5px;color:var(--body);font-weight:300;margin-top:-2px}
   .quote-source{font-size:12px;color:var(--terra);letter-spacing:.06em;white-space:nowrap}
   .shot{padding:22px 26px 6px}
@@ -309,10 +309,42 @@
     .shot,.translation{padding-left:16px;padding-right:16px}
     footer.site{flex-direction:column;align-items:flex-start;gap:8px}
   }
-  @media (prefers-reduced-motion:reduce){
-    *{animation:none !important;transition:none !important;scroll-behavior:auto !important}
-    .reveal{opacity:1;transform:none}
-  }
+
+  /* DM Sans leve em tudo (troque --display por 'Manrope' para a alternativa) */
+  h1{font-family:var(--display);font-weight:300;font-size:clamp(28px,4vw,48px);letter-spacing:-.03em;line-height:1.12;max-width:none}
+  h1 .line1{display:block;font-weight:300;white-space:nowrap}
+  h1 .line2{font-family:var(--display);font-size:clamp(16px,1.6vw,19px);font-weight:300;letter-spacing:0;line-height:1.6;margin-top:1.1em;max-width:36ch;color:var(--body)}
+  h2,h2.strong{font-weight:300;font-size:clamp(26px,3.3vw,38px);letter-spacing:-.025em;max-width:22ch}
+  .logo-name{font-size:20px;font-weight:500;letter-spacing:-.02em}
+  .logo-mark{font-size:17px;font-weight:600}
+  .stat b{font-size:30px;font-weight:300;letter-spacing:-.02em}
+  .marquee-track span{font-size:18px;font-style:normal;font-weight:300;letter-spacing:0}
+  .c-num{font-size:14px;font-weight:500}
+  .c-card h3{font-size:21px;font-weight:300;letter-spacing:-.015em}
+  .exp-body h3{font-size:26px;font-weight:300;letter-spacing:-.02em;line-height:1.25}
+  .fig b{font-size:24px;font-weight:300}
+  .m-item h3{font-size:20px;font-weight:300}
+  .quote-head strong{font-size:17px;font-weight:400}
+  .pull{font-family:var(--display);font-weight:300;font-size:clamp(20px,2.4vw,27px);line-height:1.5;max-width:34ch}
+  .about-quote{font-family:var(--display);font-style:normal;font-weight:300;font-size:19px;line-height:1.5}
+  .about-body .lead{font-family:var(--display);font-weight:300;font-size:22px;line-height:1.5;max-width:32ch}
+  /* dourado em linhas, botão principal e links */
+  .sec-tag::after{background:var(--gold)}
+  .stats{border-top-color:var(--gold)}
+  .pull{border-left-color:var(--gold);border-top-color:var(--gold)}
+  .nav-links a::after{background:var(--gold)}
+  .btn-primary{background:var(--gold);color:var(--ink)}
+  .btn-primary:hover{background:#B8903A}
+  .link-more{border-bottom-color:var(--gold)}
+  .nav-cta:hover{background:var(--gold);color:var(--ink) !important}
+  /* foto no hero */
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:64px;align-items:center}
+  .hero-photo{position:relative;margin:0;width:100%;max-width:380px;justify-self:end}
+  .hero-photo::before{content:'';position:absolute;inset:20px -20px -20px 20px;border-radius:190px 190px 18px 18px;background:var(--rose);opacity:.5}
+  .hero-photo::after{content:'';position:absolute;z-index:2;left:-7px;top:44%;width:14px;height:14px;border-radius:50%;background:var(--gold)}
+  .hero-photo .arch{position:relative;z-index:1;aspect-ratio:4/5;border-radius:190px 190px 18px 18px;overflow:hidden;background:var(--sand)}
+  .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 18%}
+  @media (max-width:900px){.hero-grid{grid-template-columns:1fr;gap:36px}.hero-photo{order:-1;justify-self:start;max-width:250px}}
 </style>
 </head>
 <body>
@@ -341,13 +373,15 @@
   <div class="blob blob-a"></div>
   <div class="blob blob-b"></div>
   <div class="wrap">
+    <div class="hero-grid">
+    <div class="hero-copy">
     <div class="kicker">
       <span>Comercial</span><span>Closer</span><span>Onboarding</span><span>Client Experience</span><span>Partnerships</span>
     </div>
 
     <h1>
-      <span class="line1">Conectando <span class="rotator" id="word">pessoas</span></span>
-      <span class="line2">e transformando relacionamento em confiança, conversão e continuidade.</span>
+      <span class="line1">Conectando pessoas,<br>ideias e oportunidades</span>
+      <span class="line2">Transformando relacionamento em confiança, conversão e continuidade.</span>
     </h1>
 
     <div class="hero-text">
@@ -361,13 +395,16 @@
     </div>
 
     <p class="place">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#B86B5E" stroke-width="2" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2A6F97" stroke-width="2" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
       Baseada em Nazaré, Portugal · aberta a oportunidades remotas e internacionais
     </p>
+    </div>
+    <figure class="hero-photo"><div class="arch"><img src="assets/sara-header.jpg" alt="Sara Alves sorrindo, apoiada na mão, diante do notebook" width="900" height="1109"></div></figure>
+    </div>
 
     <div class="stats">
       <div class="stat"><b>5 anos</b><span>vivendo e trabalhando em Portugal</span></div>
-      <div class="stat"><b>1000+</b><span>clientes acompanhados em jornadas complexas</span></div>
+      <div class="stat"><b>700+</b><span>clientes acompanhados em jornadas complexas</span></div>
       <div class="stat"><b>360°</b><span>sales · partnerships · onboarding · client experience</span></div>
       <div class="stat"><b>PT + EN</b><span>atuação em ambientes internacionais</span></div>
     </div>
@@ -432,7 +469,7 @@
           <p>Também desenvolvi partnerships com empresas ligadas ao setor — parcerias que se tornaram um canal recorrente de indicações e receita, com taxas de comissão negociadas caso a caso.</p>
           <p>Na Roots Global, reestruturei a jornada do cliente inteira: dividi o pós-venda em 4 milestones principais e 8 touchpoints, com templates, guias de call e um tracker que deu visibilidade real do status de cada cliente para o time.</p>
           <div class="exp-figs">
-            <div class="fig"><b>800+</b><span>clientes acompanhados</span></div>
+            <div class="fig"><b>700+</b><span>clientes acompanhados</span></div>
             <div class="fig"><b>Internacional</b><span>EUA, Reino Unido, Canadá e Austrália</span></div>
             <div class="fig"><b>Alto envolvimento</b><span>jornadas longas e de muita confiança</span></div>
           </div>
@@ -504,7 +541,7 @@
 
     <div class="about reveal">
       <aside class="about-aside">
-        <div class="portrait"><img src="assets/sara.jpg" alt="Sara Alves"></div>
+        <div class="portrait"><img src="assets/sara-sobre.jpg" alt="Sara Alves"></div>
         <p class="about-quote">“Curiosidade por pessoas é a parte mais estratégica do meu trabalho.”</p>
       </aside>
 
@@ -644,22 +681,6 @@
 </section>
 
 <script>
-  // Palavra rotativa do hero (troca suave)
-  (function(){
-    var words = ['pessoas','soluções','oportunidades'];
-    var el = document.getElementById('word');
-    if(!el || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    var i = 0;
-    setInterval(function(){
-      el.classList.add('fade');
-      setTimeout(function(){
-        i = (i + 1) % words.length;
-        el.textContent = words[i];
-        el.classList.remove('fade');
-      }, 400);
-    }, 2800);
-  })();
-
   // Marquee de competências
   (function(){
     var tags = ['Vendas Consultivas','Partnerships','Desenvolvimento de Negócio','Experiência do Cliente','Onboarding','Gestão de Relacionamento','Negociação','CRM','Otimização de Processos'];
